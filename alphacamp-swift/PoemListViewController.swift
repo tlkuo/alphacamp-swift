@@ -9,23 +9,20 @@
 import UIKit
 
 class PoemListViewController: UIViewController {
+    @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var poemBtn0: UIButton!
     @IBOutlet weak var poemBtn1: UIButton!
-    
-    var poemList: [Poets.Poem]?
+
+    var poet: Poets.Poet?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let list = poemList {
-            poemBtn0.setTitle(list[0].title, forState: .Normal)
-            poemBtn1.setTitle(list[1].title, forState: .Normal)
+        if let p = poet {
+            navTitle.title = p.name
+            poemBtn0.setTitle(p.poemList[0].title, forState: .Normal)
+            poemBtn1.setTitle(p.poemList[1].title, forState: .Normal)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -37,9 +34,9 @@ class PoemListViewController: UIViewController {
 
                 switch button {
                 case poemBtn0:
-                    controller.poem = poemList?[0]
+                    controller.poem = poet?.poemList[0]
                 case poemBtn1:
-                    controller.poem = poemList?[1]
+                    controller.poem = poet?.poemList[1]
                 default:
                     controller.poem = nil
                 }
@@ -50,15 +47,5 @@ class PoemListViewController: UIViewController {
     @IBAction func showPoemDetail(sender: AnyObject) {
         self.performSegueWithIdentifier("showPoemDetail", sender: sender)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

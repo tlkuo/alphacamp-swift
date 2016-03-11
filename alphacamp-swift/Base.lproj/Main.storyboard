@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--詩人清單-->
+        <!--唐詩三百首-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="poetList" id="BYZ-38-t0r" customClass="PoetListViewController" customModule="poems" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                             <constraint firstItem="7Sl-Mb-BKc" firstAttribute="top" secondItem="gxK-Zi-pH3" secondAttribute="bottom" constant="10" id="wIk-jf-yWa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="詩人清單" id="uVK-9D-X2q"/>
+                    <navigationItem key="navigationItem" title="唐詩三百首" id="uVK-9D-X2q"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="poetBtn0" destination="gxK-Zi-pH3" id="1hj-lS-X0T"/>
@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="1032" y="312"/>
         </scene>
-        <!--作品清單-->
+        <!--詩人-->
         <scene sceneID="c45-DR-TMZ">
             <objects>
                 <viewController storyboardIdentifier="poemList" id="smk-gc-TLb" customClass="PoemListViewController" customModule="poems" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,9 +112,10 @@
                             <constraint firstItem="Zdn-yu-6W1" firstAttribute="leading" secondItem="eaH-jx-7BI" secondAttribute="leading" id="aUx-g2-OzY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="作品清單" id="ENt-fS-Q5l"/>
+                    <navigationItem key="navigationItem" title="詩人" id="ENt-fS-Q5l"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="navTitle" destination="ENt-fS-Q5l" id="KCs-uV-VTi"/>
                         <outlet property="poemBtn0" destination="hwO-K9-KUG" id="eS3-S3-iEt"/>
                         <outlet property="poemBtn1" destination="Zdn-yu-6W1" id="6E2-Ac-vGz"/>
                     </connections>
@@ -163,6 +164,7 @@
                     <connections>
                         <outlet property="contentLabel" destination="BQP-Ig-tj1" id="Kgg-AP-XxA"/>
                         <outlet property="descriptionLabel" destination="SAj-Mp-yik" id="tCM-jh-Tgq"/>
+                        <outlet property="navTitle" destination="UJP-b1-Gdp" id="WBA-8e-vR7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szt-jA-z9j" userLabel="First Responder" sceneMemberID="firstResponder"/>

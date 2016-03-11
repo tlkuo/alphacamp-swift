@@ -25,11 +25,6 @@ class PoetListViewController: UIViewController {
         poetBtn3.setTitle(poets.list[3].name, forState: .Normal)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
         if segue.identifier == "showPoemList" {
@@ -39,15 +34,15 @@ class PoetListViewController: UIViewController {
 
                 switch button {
                 case poetBtn0:
-                    controller.poemList = poets.list[0].poemList
+                    controller.poet = poets.list[0]
                 case poetBtn1:
-                    controller.poemList = poets.list[1].poemList
+                    controller.poet = poets.list[1]
                 case poetBtn2:
-                    controller.poemList = poets.list[2].poemList
+                    controller.poet = poets.list[2]
                 case poetBtn3:
-                    controller.poemList = poets.list[3].poemList
+                    controller.poet = poets.list[3]
                 default:
-                    controller.poemList = nil
+                    controller.poet = nil
                 }
             }
         }
