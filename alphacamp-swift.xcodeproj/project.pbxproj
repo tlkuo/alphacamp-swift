@@ -8,24 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		5BFAD95A1C919F4600DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD9591C919F4600DA365A /* AppDelegate.swift */; };
-		5BFAD95C1C919F4600DA365A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD95B1C919F4600DA365A /* ViewController.swift */; };
+		5BFAD95C1C919F4600DA365A /* PoetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */; };
 		5BFAD95F1C919F4600DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD95D1C919F4600DA365A /* Main.storyboard */; };
 		5BFAD9611C919F4600DA365A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD9601C919F4600DA365A /* Assets.xcassets */; };
 		5BFAD9641C919F4600DA365A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD9621C919F4600DA365A /* LaunchScreen.storyboard */; };
+		5BFAD96C1C91A88100DA365A /* PoemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD96B1C91A88100DA365A /* PoemListViewController.swift */; };
+		5BFAD96E1C91A89800DA365A /* PoemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD96D1C91A89800DA365A /* PoemDetailViewController.swift */; };
+		5BFAD9741C91ABA400DA365A /* Poets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD9731C91ABA400DA365A /* Poets.swift */; };
+		5BFAD97C1C929E1400DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD97B1C929E1400DA365A /* AppDelegate.swift */; };
+		5BFAD97E1C929E1400DA365A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD97D1C929E1400DA365A /* ViewController.swift */; };
+		5BFAD9811C929E1400DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD97F1C929E1400DA365A /* Main.storyboard */; };
+		5BFAD9831C929E1400DA365A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD9821C929E1400DA365A /* Assets.xcassets */; };
+		5BFAD9861C929E1400DA365A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD9841C929E1400DA365A /* LaunchScreen.storyboard */; };
+		5BFAD98C1C929F4700DA365A /* student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD98B1C929F4700DA365A /* student.swift */; };
+		5BFAD98E1C92A4F300DA365A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD98D1C92A4F300DA365A /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5BFAD9561C919F4600DA365A /* alphacamp-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alphacamp-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BFAD9561C919F4600DA365A /* poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFAD9591C919F4600DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5BFAD95B1C919F4600DA365A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetListViewController.swift; sourceTree = "<group>"; };
 		5BFAD95E1C919F4600DA365A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BFAD9601C919F4600DA365A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BFAD9631C919F4600DA365A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BFAD9651C919F4600DA365A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BFAD96B1C91A88100DA365A /* PoemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemListViewController.swift; sourceTree = "<group>"; };
+		5BFAD96D1C91A89800DA365A /* PoemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemDetailViewController.swift; sourceTree = "<group>"; };
+		5BFAD9731C91ABA400DA365A /* Poets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poets.swift; sourceTree = "<group>"; };
+		5BFAD9791C929E1400DA365A /* students.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = students.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BFAD97B1C929E1400DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BFAD97D1C929E1400DA365A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BFAD9801C929E1400DA365A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BFAD9821C929E1400DA365A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BFAD9851C929E1400DA365A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BFAD9871C929E1400DA365A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BFAD98B1C929F4700DA365A /* student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = student.swift; sourceTree = "<group>"; };
+		5BFAD98D1C92A4F300DA365A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5BFAD9531C919F4600DA365A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BFAD9761C929E1400DA365A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,7 +67,8 @@
 		5BFAD94D1C919F4600DA365A = {
 			isa = PBXGroup;
 			children = (
-				5BFAD9581C919F4600DA365A /* alphacamp-swift */,
+				5BFAD9581C919F4600DA365A /* poems */,
+				5BFAD97A1C929E1400DA365A /* students */,
 				5BFAD9571C919F4600DA365A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +76,50 @@
 		5BFAD9571C919F4600DA365A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5BFAD9561C919F4600DA365A /* alphacamp-swift.app */,
+				5BFAD9561C919F4600DA365A /* poems.app */,
+				5BFAD9791C929E1400DA365A /* students.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5BFAD9581C919F4600DA365A /* alphacamp-swift */ = {
+		5BFAD9581C919F4600DA365A /* poems */ = {
 			isa = PBXGroup;
 			children = (
 				5BFAD9591C919F4600DA365A /* AppDelegate.swift */,
-				5BFAD95B1C919F4600DA365A /* ViewController.swift */,
+				5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */,
+				5BFAD96B1C91A88100DA365A /* PoemListViewController.swift */,
+				5BFAD96D1C91A89800DA365A /* PoemDetailViewController.swift */,
+				5BFAD9731C91ABA400DA365A /* Poets.swift */,
 				5BFAD95D1C919F4600DA365A /* Main.storyboard */,
 				5BFAD9601C919F4600DA365A /* Assets.xcassets */,
 				5BFAD9621C919F4600DA365A /* LaunchScreen.storyboard */,
 				5BFAD9651C919F4600DA365A /* Info.plist */,
 			);
+			name = poems;
 			path = "alphacamp-swift";
+			sourceTree = "<group>";
+		};
+		5BFAD97A1C929E1400DA365A /* students */ = {
+			isa = PBXGroup;
+			children = (
+				5BFAD97B1C929E1400DA365A /* AppDelegate.swift */,
+				5BFAD97D1C929E1400DA365A /* ViewController.swift */,
+				5BFAD98D1C92A4F300DA365A /* DetailViewController.swift */,
+				5BFAD98B1C929F4700DA365A /* student.swift */,
+				5BFAD97F1C929E1400DA365A /* Main.storyboard */,
+				5BFAD9821C929E1400DA365A /* Assets.xcassets */,
+				5BFAD9841C929E1400DA365A /* LaunchScreen.storyboard */,
+				5BFAD9871C929E1400DA365A /* Info.plist */,
+			);
+			path = students;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5BFAD9551C919F4600DA365A /* alphacamp-swift */ = {
+		5BFAD9551C919F4600DA365A /* poems */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BFAD9681C919F4600DA365A /* Build configuration list for PBXNativeTarget "alphacamp-swift" */;
+			buildConfigurationList = 5BFAD9681C919F4600DA365A /* Build configuration list for PBXNativeTarget "poems" */;
 			buildPhases = (
 				5BFAD9521C919F4600DA365A /* Sources */,
 				5BFAD9531C919F4600DA365A /* Frameworks */,
@@ -79,9 +129,26 @@
 			);
 			dependencies = (
 			);
-			name = "alphacamp-swift";
+			name = poems;
 			productName = "alphacamp-swift";
-			productReference = 5BFAD9561C919F4600DA365A /* alphacamp-swift.app */;
+			productReference = 5BFAD9561C919F4600DA365A /* poems.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BFAD9781C929E1400DA365A /* students */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BFAD98A1C929E1400DA365A /* Build configuration list for PBXNativeTarget "students" */;
+			buildPhases = (
+				5BFAD9751C929E1400DA365A /* Sources */,
+				5BFAD9761C929E1400DA365A /* Frameworks */,
+				5BFAD9771C929E1400DA365A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = students;
+			productName = students;
+			productReference = 5BFAD9791C929E1400DA365A /* students.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,6 +162,9 @@
 				ORGANIZATIONNAME = Frainbow;
 				TargetAttributes = {
 					5BFAD9551C919F4600DA365A = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					5BFAD9781C929E1400DA365A = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
@@ -112,7 +182,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5BFAD9551C919F4600DA365A /* alphacamp-swift */,
+				5BFAD9551C919F4600DA365A /* poems */,
+				5BFAD9781C929E1400DA365A /* students */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +199,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BFAD9771C929E1400DA365A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BFAD9861C929E1400DA365A /* LaunchScreen.storyboard in Resources */,
+				5BFAD9831C929E1400DA365A /* Assets.xcassets in Resources */,
+				5BFAD9811C929E1400DA365A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -135,8 +216,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BFAD95C1C919F4600DA365A /* ViewController.swift in Sources */,
+				5BFAD9741C91ABA400DA365A /* Poets.swift in Sources */,
+				5BFAD96E1C91A89800DA365A /* PoemDetailViewController.swift in Sources */,
+				5BFAD95C1C919F4600DA365A /* PoetListViewController.swift in Sources */,
 				5BFAD95A1C919F4600DA365A /* AppDelegate.swift in Sources */,
+				5BFAD96C1C91A88100DA365A /* PoemListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BFAD9751C929E1400DA365A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BFAD97E1C929E1400DA365A /* ViewController.swift in Sources */,
+				5BFAD97C1C929E1400DA365A /* AppDelegate.swift in Sources */,
+				5BFAD98C1C929F4700DA365A /* student.swift in Sources */,
+				5BFAD98E1C92A4F300DA365A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +250,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				5BFAD9631C919F4600DA365A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5BFAD97F1C929E1400DA365A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BFAD9801C929E1400DA365A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BFAD9841C929E1400DA365A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BFAD9851C929E1400DA365A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -265,6 +376,28 @@
 			};
 			name = Release;
 		};
+		5BFAD9881C929E1400DA365A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = students/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.students;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BFAD9891C929E1400DA365A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = students/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.students;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -277,11 +410,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BFAD9681C919F4600DA365A /* Build configuration list for PBXNativeTarget "alphacamp-swift" */ = {
+		5BFAD9681C919F4600DA365A /* Build configuration list for PBXNativeTarget "poems" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5BFAD9691C919F4600DA365A /* Debug */,
 				5BFAD96A1C919F4600DA365A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BFAD98A1C929E1400DA365A /* Build configuration list for PBXNativeTarget "students" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BFAD9881C929E1400DA365A /* Debug */,
+				5BFAD9891C929E1400DA365A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -1,25 +1,192 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1fh-LU-6Ej">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--詩人清單-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="poetList" id="BYZ-38-t0r" customClass="PoetListViewController" customModule="poems" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sl-Mb-BKc" userLabel="Poet Btn1">
+                                <rect key="frame" x="0.0" y="114" width="320" height="30"/>
+                                <state key="normal" title="詩人1"/>
+                                <connections>
+                                    <action selector="showPoemList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="37l-fI-Tgl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujj-F2-3Z8" userLabel="Poet Btn2">
+                                <rect key="frame" x="0.0" y="154" width="320" height="30"/>
+                                <state key="normal" title="詩人2"/>
+                                <connections>
+                                    <action selector="showPoemList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ata-4F-TDg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LML-it-uOB" userLabel="Poet Btn3">
+                                <rect key="frame" x="0.0" y="194" width="320" height="30"/>
+                                <state key="normal" title="詩人3"/>
+                                <connections>
+                                    <action selector="showPoemList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xV-q0-OAw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxK-Zi-pH3" userLabel="Poet Btn0">
+                                <rect key="frame" x="0.0" y="74" width="320" height="30"/>
+                                <state key="normal" title="詩人0"/>
+                                <connections>
+                                    <segue destination="smk-gc-TLb" kind="show" identifier="showPoemList" id="dSs-yp-Ee1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ujj-F2-3Z8" secondAttribute="trailing" id="3sl-dp-mBX"/>
+                            <constraint firstItem="Ujj-F2-3Z8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="64H-Zk-08g"/>
+                            <constraint firstItem="LML-it-uOB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IaP-ax-DeU"/>
+                            <constraint firstItem="7Sl-Mb-BKc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Idc-jX-4Kk"/>
+                            <constraint firstAttribute="trailing" secondItem="7Sl-Mb-BKc" secondAttribute="trailing" id="KDv-BM-Tuz"/>
+                            <constraint firstItem="LML-it-uOB" firstAttribute="top" secondItem="Ujj-F2-3Z8" secondAttribute="bottom" constant="10" id="LCh-0N-c3u"/>
+                            <constraint firstItem="gxK-Zi-pH3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="NII-ds-zEG"/>
+                            <constraint firstAttribute="trailing" secondItem="LML-it-uOB" secondAttribute="trailing" id="Qmr-Ga-rn5"/>
+                            <constraint firstAttribute="trailing" secondItem="gxK-Zi-pH3" secondAttribute="trailing" id="XNS-VD-h1A"/>
+                            <constraint firstItem="Ujj-F2-3Z8" firstAttribute="top" secondItem="7Sl-Mb-BKc" secondAttribute="bottom" constant="10" id="qsc-jL-yrr"/>
+                            <constraint firstItem="gxK-Zi-pH3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w4L-3r-2KC"/>
+                            <constraint firstItem="7Sl-Mb-BKc" firstAttribute="top" secondItem="gxK-Zi-pH3" secondAttribute="bottom" constant="10" id="wIk-jf-yWa"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="詩人清單" id="uVK-9D-X2q"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="poetBtn0" destination="gxK-Zi-pH3" id="1hj-lS-X0T"/>
+                        <outlet property="poetBtn1" destination="7Sl-Mb-BKc" id="YpU-iJ-9RS"/>
+                        <outlet property="poetBtn2" destination="Ujj-F2-3Z8" id="MbM-H3-qh0"/>
+                        <outlet property="poetBtn3" destination="LML-it-uOB" id="Z29-Ry-V1f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1032" y="312"/>
+        </scene>
+        <!--作品清單-->
+        <scene sceneID="c45-DR-TMZ">
+            <objects>
+                <viewController storyboardIdentifier="poemList" id="smk-gc-TLb" customClass="PoemListViewController" customModule="poems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mh8-gV-i7T"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fpb-y4-yW3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eaH-jx-7BI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwO-K9-KUG" userLabel="Poem Btn0">
+                                <rect key="frame" x="0.0" y="74" width="320" height="30"/>
+                                <state key="normal" title="作品0"/>
+                                <connections>
+                                    <segue destination="h3H-9G-1eU" kind="show" identifier="showPoemDetail" id="eSQ-0g-VqT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdn-yu-6W1" userLabel="Poem Btn1">
+                                <rect key="frame" x="0.0" y="114" width="320" height="30"/>
+                                <state key="normal" title="作品1"/>
+                                <connections>
+                                    <action selector="showPoemDetail:" destination="smk-gc-TLb" eventType="touchUpInside" id="X9c-i4-Fvo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hwO-K9-KUG" firstAttribute="leading" secondItem="eaH-jx-7BI" secondAttribute="leading" id="Epg-Pt-iYm"/>
+                            <constraint firstAttribute="trailing" secondItem="hwO-K9-KUG" secondAttribute="trailing" id="FT7-wQ-eR0"/>
+                            <constraint firstItem="hwO-K9-KUG" firstAttribute="top" secondItem="mh8-gV-i7T" secondAttribute="bottom" constant="10" id="Jaz-Ta-KFn"/>
+                            <constraint firstAttribute="trailing" secondItem="Zdn-yu-6W1" secondAttribute="trailing" id="UVh-AY-xMD"/>
+                            <constraint firstItem="Zdn-yu-6W1" firstAttribute="top" secondItem="hwO-K9-KUG" secondAttribute="bottom" constant="10" id="VgK-s0-oeE"/>
+                            <constraint firstItem="Zdn-yu-6W1" firstAttribute="leading" secondItem="eaH-jx-7BI" secondAttribute="leading" id="aUx-g2-OzY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="作品清單" id="ENt-fS-Q5l"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="poemBtn0" destination="hwO-K9-KUG" id="eS3-S3-iEt"/>
+                        <outlet property="poemBtn1" destination="Zdn-yu-6W1" id="6E2-Ac-vGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ik7-YP-Iwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450" y="312"/>
+        </scene>
+        <!--標題-->
+        <scene sceneID="N4M-4P-hR2">
+            <objects>
+                <viewController storyboardIdentifier="poemDetail" id="h3H-9G-1eU" customClass="PoemDetailViewController" customModule="poems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cnS-wM-inP"/>
+                        <viewControllerLayoutGuide type="bottom" id="YVr-4C-h6j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EE8-Y4-Ojc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="內容" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQP-Ig-tj1">
+                                <rect key="frame" x="20" y="84" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描述" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAj-Mp-yik">
+                                <rect key="frame" x="20" y="124.5" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BQP-Ig-tj1" firstAttribute="top" secondItem="cnS-wM-inP" secondAttribute="bottom" constant="20" id="DTw-7J-5Qg"/>
+                            <constraint firstItem="SAj-Mp-yik" firstAttribute="leading" secondItem="EE8-Y4-Ojc" secondAttribute="leading" constant="20" id="OSL-gy-hIH"/>
+                            <constraint firstAttribute="trailing" secondItem="BQP-Ig-tj1" secondAttribute="trailing" constant="20" id="WLQ-cc-kbH"/>
+                            <constraint firstAttribute="trailing" secondItem="SAj-Mp-yik" secondAttribute="trailing" constant="20" id="foE-UG-mVy"/>
+                            <constraint firstItem="BQP-Ig-tj1" firstAttribute="leading" secondItem="EE8-Y4-Ojc" secondAttribute="leading" constant="20" id="hLy-Gi-HFJ"/>
+                            <constraint firstItem="SAj-Mp-yik" firstAttribute="top" secondItem="BQP-Ig-tj1" secondAttribute="bottom" constant="20" id="nQr-AE-Ynm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="標題" id="UJP-b1-Gdp"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="contentLabel" destination="BQP-Ig-tj1" id="Kgg-AP-XxA"/>
+                        <outlet property="descriptionLabel" destination="SAj-Mp-yik" id="tCM-jh-Tgq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szt-jA-z9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853" y="312"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="my9-c6-dU0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1fh-LU-6Ej" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a5r-3p-4Kw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NLj-ix-KN2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3X-ef-YEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="312"/>
         </scene>
     </scenes>
 </document>
