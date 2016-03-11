@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="students" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ks-xe-DNo">
+                                <rect key="frame" x="0.0" y="30" width="320" height="30"/>
+                                <state key="normal" title="Student0"/>
+                                <connections>
+                                    <segue destination="R4i-KB-9tP" kind="show" identifier="ShowDetail" id="Msj-lE-3BL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l06-mN-fVb">
+                                <rect key="frame" x="0.0" y="70" width="320" height="30"/>
+                                <state key="normal" title="Student1"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="l06-mN-fVb" secondAttribute="trailing" id="6dJ-EM-V04"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ks-xe-DNo" secondAttribute="trailing" id="JTu-K4-GYq"/>
+                            <constraint firstItem="4Ks-xe-DNo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f00-8y-qQW"/>
+                            <constraint firstItem="4Ks-xe-DNo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ivn-K8-MGZ"/>
+                            <constraint firstItem="l06-mN-fVb" firstAttribute="top" secondItem="4Ks-xe-DNo" secondAttribute="bottom" constant="10" id="lki-ND-FCt"/>
+                            <constraint firstItem="l06-mN-fVb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x1f-ue-SVH"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="studentBtn0" destination="4Ks-xe-DNo" id="rFy-8T-oxJ"/>
+                        <outlet property="studentBtn1" destination="l06-mN-fVb" id="e88-I7-fxT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="311"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="bQr-lo-cGN">
+            <objects>
+                <viewController id="R4i-KB-9tP" customClass="DetailViewController" customModule="students" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="64B-pQ-GJ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="7vc-kO-c7w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UWJ-r6-yeF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nhr-dS-M9g">
+                                <rect key="frame" x="0.0" y="70" width="320" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dn7-AY-JLc">
+                                <rect key="frame" x="16" y="30" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wU-gH-w7a">
+                                <rect key="frame" x="143" y="269" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="R4i-KB-9tP" eventType="touchUpInside" id="X0T-9X-zsc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7wU-gH-w7a" firstAttribute="leading" secondItem="UWJ-r6-yeF" secondAttribute="leadingMargin" id="7gK-sU-B7g"/>
+                            <constraint firstItem="Dn7-AY-JLc" firstAttribute="leading" secondItem="UWJ-r6-yeF" secondAttribute="leadingMargin" id="7na-Eb-r1n"/>
+                            <constraint firstItem="7wU-gH-w7a" firstAttribute="top" secondItem="Nhr-dS-M9g" secondAttribute="bottom" constant="10" id="BUb-4f-HRW"/>
+                            <constraint firstItem="Dn7-AY-JLc" firstAttribute="top" secondItem="64B-pQ-GJ6" secondAttribute="bottom" constant="10" id="EN5-b3-YGT"/>
+                            <constraint firstItem="Nhr-dS-M9g" firstAttribute="top" secondItem="Dn7-AY-JLc" secondAttribute="bottom" constant="10" id="Ejn-wn-fXV"/>
+                            <constraint firstItem="7wU-gH-w7a" firstAttribute="centerX" secondItem="UWJ-r6-yeF" secondAttribute="centerX" id="GxK-zd-Xse"/>
+                            <constraint firstItem="7wU-gH-w7a" firstAttribute="centerY" secondItem="UWJ-r6-yeF" secondAttribute="centerY" id="Hi1-ah-1FW"/>
+                            <constraint firstItem="Nhr-dS-M9g" firstAttribute="leading" secondItem="UWJ-r6-yeF" secondAttribute="leading" id="P3a-en-BF2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7wU-gH-w7a" secondAttribute="trailing" id="TJL-kc-E98"/>
+                            <constraint firstAttribute="trailing" secondItem="Nhr-dS-M9g" secondAttribute="trailing" id="bgf-Lr-y9F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dn7-AY-JLc" secondAttribute="trailing" id="rDA-JJ-Pwg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7gK-sU-B7g"/>
+                                <exclude reference="BUb-4f-HRW"/>
+                                <exclude reference="TJL-kc-E98"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="Dn7-AY-JLc" id="Ej4-Pb-KLE"/>
+                        <outlet property="scroreLabel" destination="Nhr-dS-M9g" id="rNc-PX-PMQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3VX-RR-6bo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="311"/>
+        </scene>
+    </scenes>
+</document>

@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+struct Student {
+    var name: String
+    var score: Int
+}
+
+struct Class {
+     var students: [Student] = [
+        Student(name: "Petper", score: 100),
+        Student(name: "John", score: 95)   
+    ]
+}
+
+
