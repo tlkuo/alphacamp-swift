@@ -13,15 +13,18 @@ class PoemListViewController: UIViewController {
     @IBOutlet weak var poemBtn0: UIButton!
     @IBOutlet weak var poemBtn1: UIButton!
 
+    var poemBtnArray: [UIButton] = []
     var poet: Poets.Poet?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        poemBtnArray = [poemBtn0, poemBtn1]
 
-        if let p = poet {
-            navTitle.title = p.name
-            poemBtn0.setTitle(p.poemList[0].title, forState: .Normal)
-            poemBtn1.setTitle(p.poemList[1].title, forState: .Normal)
+        navTitle.title = poet?.name
+        
+        for i in 0..<poemBtnArray.count {
+            poemBtnArray[i].setTitle(poet?.poemList[i].title, forState: .Normal)
         }
     }
     
@@ -29,17 +32,11 @@ class PoemListViewController: UIViewController {
 
         if segue.identifier == "showPoemDetail" {
 
-            if let controller = segue.destinationViewController as? PoemDetailViewController,
-                   button = sender as? UIButton {
+            if let destViewController = segue.destinationViewController as? PoemDetailViewController,
+                   button = sender as? UIButton,
+                   index = poemBtnArray.indexOf(button) {
 
-                switch button {
-                case poemBtn0:
-                    controller.poem = poet?.poemList[0]
-                case poemBtn1:
-                    controller.poem = poet?.poemList[1]
-                default:
-                    controller.poem = nil
-                }
+                destViewController.poem = poet?.poemList[index]
             }
         }
     }

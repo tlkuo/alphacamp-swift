@@ -14,36 +14,28 @@ class PoetListViewController: UIViewController {
     @IBOutlet weak var poetBtn2: UIButton!
     @IBOutlet weak var poetBtn3: UIButton!
 
+    var poetBtnArray: [UIButton] = []
     var poets = Poets()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        poetBtn0.setTitle(poets.list[0].name, forState: .Normal)
-        poetBtn1.setTitle(poets.list[1].name, forState: .Normal)
-        poetBtn2.setTitle(poets.list[2].name, forState: .Normal)
-        poetBtn3.setTitle(poets.list[3].name, forState: .Normal)
+        poetBtnArray = [poetBtn0, poetBtn1, poetBtn2, poetBtn3]
+
+        for i in 0..<poetBtnArray.count {
+            poetBtnArray[i].setTitle(poets.list[i].name, forState: .Normal)
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
         if segue.identifier == "showPoemList" {
 
-            if let controller = segue.destinationViewController as? PoemListViewController,
-                   button = sender as? UIButton {
+            if let destViewController = segue.destinationViewController as? PoemListViewController,
+                   button = sender as? UIButton,
+                   index = poetBtnArray.indexOf(button) {
 
-                switch button {
-                case poetBtn0:
-                    controller.poet = poets.list[0]
-                case poetBtn1:
-                    controller.poet = poets.list[1]
-                case poetBtn2:
-                    controller.poet = poets.list[2]
-                case poetBtn3:
-                    controller.poet = poets.list[3]
-                default:
-                    controller.poet = nil
-                }
+                destViewController.poet = poets.list[index]
             }
         }
     }
