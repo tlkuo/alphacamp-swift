@@ -8,36 +8,40 @@
 
 import UIKit
 
-class PoetListViewController: UIViewController {
-    @IBOutlet weak var poetBtn0: UIButton!
-    @IBOutlet weak var poetBtn1: UIButton!
-    @IBOutlet weak var poetBtn2: UIButton!
-    @IBOutlet weak var poetBtn3: UIButton!
+class PoetListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var poetBtnArray: [UIButton] = []
+    @IBOutlet weak var poetTableView: UITableView!
+
     var poets = Poets()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        poetBtnArray = [poetBtn0, poetBtn1, poetBtn2, poetBtn3]
-
-        for i in 0..<poetBtnArray.count {
-            poetBtnArray[i].setTitle(poets.list[i].name, forState: .Normal)
-        }
+        
+        poetTableView.dataSource = self
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
-        if segue.identifier == "showPoemList" {
+        if segue.identifier == "showPoemTableList" {
 
             if let destViewController = segue.destinationViewController as? PoemListViewController,
-                   button = sender as? UIButton,
-                   index = poetBtnArray.indexOf(button) {
-
-                destViewController.poet = poets.list[index]
+                   indexPath = poetTableView.indexPathForSelectedRow {
+                    
+                destViewController.poet = poets.list[indexPath.row]
             }
         }
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return poets.list.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("PoetCell", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = poets.list[indexPath.row].name
+        
+        return cell
     }
 
     @IBAction func showPoemList(sender: AnyObject) {

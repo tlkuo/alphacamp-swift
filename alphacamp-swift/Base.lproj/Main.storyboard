@@ -17,58 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sl-Mb-BKc" userLabel="Poet Btn1">
-                                <rect key="frame" x="0.0" y="114" width="320" height="30"/>
-                                <state key="normal" title="詩人1"/>
-                                <connections>
-                                    <action selector="showPoemList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="37l-fI-Tgl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujj-F2-3Z8" userLabel="Poet Btn2">
-                                <rect key="frame" x="0.0" y="154" width="320" height="30"/>
-                                <state key="normal" title="詩人2"/>
-                                <connections>
-                                    <action selector="showPoemList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ata-4F-TDg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LML-it-uOB" userLabel="Poet Btn3">
-                                <rect key="frame" x="0.0" y="194" width="320" height="30"/>
-                                <state key="normal" title="詩人3"/>
-                                <connections>
-                                    <action selector="showPoemList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xV-q0-OAw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxK-Zi-pH3" userLabel="Poet Btn0">
-                                <rect key="frame" x="0.0" y="74" width="320" height="30"/>
-                                <state key="normal" title="詩人0"/>
-                                <connections>
-                                    <segue destination="smk-gc-TLb" kind="show" identifier="showPoemList" id="dSs-yp-Ee1"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uSd-dQ-oX9">
+                                <rect key="frame" x="10" y="10" width="300" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="fNI-p1-DLl">
+                                    <rect key="frame" x="0.0" y="136" width="300" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PoetCell" id="ctx-zB-Qgj">
+                                        <rect key="frame" x="0.0" y="92" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ctx-zB-Qgj" id="nEg-Wr-cOt">
+                                            <rect key="frame" x="0.0" y="0.0" width="267" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="smk-gc-TLb" kind="show" identifier="showPoemTableList" id="9r7-JH-wnN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Ujj-F2-3Z8" secondAttribute="trailing" id="3sl-dp-mBX"/>
-                            <constraint firstItem="Ujj-F2-3Z8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="64H-Zk-08g"/>
-                            <constraint firstItem="LML-it-uOB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IaP-ax-DeU"/>
-                            <constraint firstItem="7Sl-Mb-BKc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Idc-jX-4Kk"/>
-                            <constraint firstAttribute="trailing" secondItem="7Sl-Mb-BKc" secondAttribute="trailing" id="KDv-BM-Tuz"/>
-                            <constraint firstItem="LML-it-uOB" firstAttribute="top" secondItem="Ujj-F2-3Z8" secondAttribute="bottom" constant="10" id="LCh-0N-c3u"/>
-                            <constraint firstItem="gxK-Zi-pH3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="NII-ds-zEG"/>
-                            <constraint firstAttribute="trailing" secondItem="LML-it-uOB" secondAttribute="trailing" id="Qmr-Ga-rn5"/>
-                            <constraint firstAttribute="trailing" secondItem="gxK-Zi-pH3" secondAttribute="trailing" id="XNS-VD-h1A"/>
-                            <constraint firstItem="Ujj-F2-3Z8" firstAttribute="top" secondItem="7Sl-Mb-BKc" secondAttribute="bottom" constant="10" id="qsc-jL-yrr"/>
-                            <constraint firstItem="gxK-Zi-pH3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w4L-3r-2KC"/>
-                            <constraint firstItem="7Sl-Mb-BKc" firstAttribute="top" secondItem="gxK-Zi-pH3" secondAttribute="bottom" constant="10" id="wIk-jf-yWa"/>
+                            <constraint firstAttribute="trailing" secondItem="uSd-dQ-oX9" secondAttribute="trailing" constant="10" id="6Eh-sc-ejj"/>
+                            <constraint firstItem="uSd-dQ-oX9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="FUb-oa-X4G"/>
+                            <constraint firstItem="uSd-dQ-oX9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="FjZ-GS-QTJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uSd-dQ-oX9" secondAttribute="bottom" constant="10" id="Mac-oM-Hut"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="唐詩三百首" id="uVK-9D-X2q"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="poetBtn0" destination="gxK-Zi-pH3" id="1hj-lS-X0T"/>
-                        <outlet property="poetBtn1" destination="7Sl-Mb-BKc" id="YpU-iJ-9RS"/>
-                        <outlet property="poetBtn2" destination="Ujj-F2-3Z8" id="MbM-H3-qh0"/>
-                        <outlet property="poetBtn3" destination="LML-it-uOB" id="Z29-Ry-V1f"/>
+                        <outlet property="poetTableView" destination="uSd-dQ-oX9" id="tcT-pU-0SK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,37 +70,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwO-K9-KUG" userLabel="Poem Btn0">
-                                <rect key="frame" x="0.0" y="74" width="320" height="30"/>
-                                <state key="normal" title="作品0"/>
-                                <connections>
-                                    <segue destination="h3H-9G-1eU" kind="show" identifier="showPoemDetail" id="eSQ-0g-VqT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdn-yu-6W1" userLabel="Poem Btn1">
-                                <rect key="frame" x="0.0" y="114" width="320" height="30"/>
-                                <state key="normal" title="作品1"/>
-                                <connections>
-                                    <action selector="showPoemDetail:" destination="smk-gc-TLb" eventType="touchUpInside" id="X9c-i4-Fvo"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uc8-VX-x3O">
+                                <rect key="frame" x="10" y="10" width="300" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Psu-y2-ejW">
+                                    <rect key="frame" x="0.0" y="136" width="300" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PoemCell" id="vXJ-LX-kAg">
+                                        <rect key="frame" x="0.0" y="92" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vXJ-LX-kAg" id="wI5-oF-IYw">
+                                            <rect key="frame" x="0.0" y="0.0" width="267" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="h3H-9G-1eU" kind="show" identifier="showPoemTableDetail" id="r0d-Qr-6UV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hwO-K9-KUG" firstAttribute="leading" secondItem="eaH-jx-7BI" secondAttribute="leading" id="Epg-Pt-iYm"/>
-                            <constraint firstAttribute="trailing" secondItem="hwO-K9-KUG" secondAttribute="trailing" id="FT7-wQ-eR0"/>
-                            <constraint firstItem="hwO-K9-KUG" firstAttribute="top" secondItem="mh8-gV-i7T" secondAttribute="bottom" constant="10" id="Jaz-Ta-KFn"/>
-                            <constraint firstAttribute="trailing" secondItem="Zdn-yu-6W1" secondAttribute="trailing" id="UVh-AY-xMD"/>
-                            <constraint firstItem="Zdn-yu-6W1" firstAttribute="top" secondItem="hwO-K9-KUG" secondAttribute="bottom" constant="10" id="VgK-s0-oeE"/>
-                            <constraint firstItem="Zdn-yu-6W1" firstAttribute="leading" secondItem="eaH-jx-7BI" secondAttribute="leading" id="aUx-g2-OzY"/>
+                            <constraint firstItem="uc8-VX-x3O" firstAttribute="leading" secondItem="eaH-jx-7BI" secondAttribute="leading" constant="10" id="EOa-oK-Bkv"/>
+                            <constraint firstAttribute="trailing" secondItem="uc8-VX-x3O" secondAttribute="trailing" constant="10" id="U25-Ag-GEy"/>
+                            <constraint firstItem="Fpb-y4-yW3" firstAttribute="top" secondItem="uc8-VX-x3O" secondAttribute="bottom" constant="10" id="Zkk-ez-vsS"/>
+                            <constraint firstItem="uc8-VX-x3O" firstAttribute="top" secondItem="eaH-jx-7BI" secondAttribute="top" constant="10" id="yr6-ml-rbD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="詩人" id="ENt-fS-Q5l"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="navTitle" destination="ENt-fS-Q5l" id="KCs-uV-VTi"/>
-                        <outlet property="poemBtn0" destination="hwO-K9-KUG" id="eS3-S3-iEt"/>
-                        <outlet property="poemBtn1" destination="Zdn-yu-6W1" id="6E2-Ac-vGz"/>
+                        <outlet property="poemTableView" destination="uc8-VX-x3O" id="Bbd-qC-vN8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ik7-YP-Iwq" userLabel="First Responder" sceneMemberID="firstResponder"/>

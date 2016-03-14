@@ -8,37 +8,42 @@
 
 import UIKit
 
-class PoemListViewController: UIViewController {
-    @IBOutlet weak var navTitle: UINavigationItem!
-    @IBOutlet weak var poemBtn0: UIButton!
-    @IBOutlet weak var poemBtn1: UIButton!
+class PoemListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var poemBtnArray: [UIButton] = []
+    @IBOutlet weak var navTitle: UINavigationItem!
+    @IBOutlet weak var poemTableView: UITableView!
+
     var poet: Poets.Poet?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        poemBtnArray = [poemBtn0, poemBtn1]
 
         navTitle.title = poet?.name
-        
-        for i in 0..<poemBtnArray.count {
-            poemBtnArray[i].setTitle(poet?.poemList[i].title, forState: .Normal)
-        }
+        poemTableView.dataSource = self
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
-        if segue.identifier == "showPoemDetail" {
+        if segue.identifier == "showPoemTableDetail" {
 
             if let destViewController = segue.destinationViewController as? PoemDetailViewController,
-                   button = sender as? UIButton,
-                   index = poemBtnArray.indexOf(button) {
+                   indexPath = poemTableView.indexPathForSelectedRow {
 
-                destViewController.poem = poet?.poemList[index]
+                destViewController.poem = poet?.poemList[indexPath.row]
             }
         }
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return poet?.poemList.count ?? 0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("PoemCell", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = poet?.poemList[indexPath.row].title
+        
+        return cell
     }
 
     @IBAction func showPoemDetail(sender: AnyObject) {
