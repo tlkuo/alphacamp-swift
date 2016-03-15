@@ -19,7 +19,6 @@ class PoemListViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
 
         navTitle.title = poet?.name
-        poemTableView.dataSource = self
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -44,10 +43,6 @@ class PoemListViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.textLabel?.text = poet?.poemList[indexPath.row].title
         
         return cell
-    }
-
-    @IBAction func showPoemDetail(sender: AnyObject) {
-        self.performSegueWithIdentifier("showPoemDetail", sender: sender)
     }
 
 }

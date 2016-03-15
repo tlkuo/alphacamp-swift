@@ -16,8 +16,6 @@ class PoetListViewController: UIViewController, UITableViewDataSource, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        poetTableView.dataSource = self
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -44,8 +42,5 @@ class PoetListViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
 
-    @IBAction func showPoemList(sender: AnyObject) {
-        self.performSegueWithIdentifier("showPoemList", sender: sender)
-    }
 }
 
