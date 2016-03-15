@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1fh-LU-6Ej">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sqK-x4-WtZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uSd-dQ-oX9">
-                                <rect key="frame" x="10" y="10" width="300" height="548"/>
+                                <rect key="frame" x="10" y="10" width="300" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="fNI-p1-DLl">
                                     <rect key="frame" x="0.0" y="136" width="300" height="44"/>
@@ -59,7 +59,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032" y="312"/>
+            <point key="canvasLocation" x="1844" y="312"/>
+        </scene>
+        <!--宋詞-->
+        <scene sceneID="wqu-os-vRQ">
+            <objects>
+                <navigationController title="宋詞" id="BvX-5n-9hJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="宋詞" id="YhO-cZ-CMs"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PoY-Mr-Tya">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="x86-e1-jQq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Exl-2o-yLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1371" y="671"/>
         </scene>
         <!--詩人-->
         <scene sceneID="c45-DR-TMZ">
@@ -74,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uc8-VX-x3O">
-                                <rect key="frame" x="10" y="10" width="300" height="548"/>
+                                <rect key="frame" x="10" y="10" width="300" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Psu-y2-ejW">
                                     <rect key="frame" x="0.0" y="136" width="300" height="44"/>
@@ -116,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ik7-YP-Iwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1450" y="312"/>
+            <point key="canvasLocation" x="2262" y="312"/>
         </scene>
         <!--標題-->
         <scene sceneID="N4M-4P-hR2">
@@ -163,12 +181,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szt-jA-z9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853" y="312"/>
+            <point key="canvasLocation" x="2665" y="312"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--唐詩-->
         <scene sceneID="my9-c6-dU0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1fh-LU-6Ej" sceneMemberID="viewController">
+                <navigationController title="唐詩" automaticallyAdjustsScrollViewInsets="NO" id="1fh-LU-6Ej" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="唐詩" id="cFP-Zf-E9G">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a5r-3p-4Kw">
@@ -182,7 +203,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3X-ef-YEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="312"/>
+            <point key="canvasLocation" x="1371" y="0.0"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Sfq-0W-Sll">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sqK-x4-WtZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="G4o-b4-Ch9">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1fh-LU-6Ej" kind="relationship" relationship="viewControllers" id="mcs-E0-7ow"/>
+                        <segue destination="BvX-5n-9hJ" kind="relationship" relationship="viewControllers" id="E0y-3U-MlP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nM3-a8-5Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="312"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NLj-ix-KN2"/>
+    </inferredMetricsTieBreakers>
 </document>

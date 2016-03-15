@@ -12,10 +12,17 @@ class PoetListViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet weak var poetTableView: UITableView!
 
-    var poets = Poets()
+    var poets = Poets(.Tang)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationItem.title = Poets.Categories.Tang.rawValue
+
+        if tabBarController?.selectedIndex == 1 {
+            poets = Poets(.Song)
+            navigationItem.title = Poets.Categories.Song.rawValue
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

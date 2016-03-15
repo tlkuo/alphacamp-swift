@@ -21,9 +21,26 @@ class Poets {
         var poemList: [Poem]
     }
 
+    enum Categories: String {
+        case Tang = "唐詩"
+        case Song = "宋詞"
+    }
+
+    var category: String
     var list: [Poet] = []
 
-    init() {
+    init(_ category: Categories) {
+        self.category = category.rawValue
+
+        switch category {
+        case .Tang:
+            initTang()
+        case .Song:
+            initSong()
+        }
+    }
+
+    func initTang() {
 
         do {
             let poet = Poet(name: "孟浩然", poemList: [
@@ -37,7 +54,7 @@ class Poets {
 
             list.append(poet)
         }
-        
+
         do {
             let poet = Poet(name: "李白", poemList: [
                 Poem(title: "夜思",
@@ -50,7 +67,7 @@ class Poets {
 
             list.append(poet)
         }
-        
+
         do {
             let poet = Poet(name: "王維", poemList: [
                 Poem(title: "鹿柴",
@@ -63,7 +80,7 @@ class Poets {
 
             list.append(poet)
         }
-        
+
         do {
             let poet = Poet(name: "劉長卿", poemList: [
                 Poem(title: "送靈澈",
@@ -72,6 +89,61 @@ class Poets {
                 Poem(title: "彈琴",
                     content: "泠泠七弦上，靜听松風寒。\n古調雖自愛，今人多不彈。\n",
                     description: "凄清的音樂發自七弦古琴，靜靜細听是風入松的古音。我就愛這令人神往的古曲，只可惜如今世上不太流行。")
+                ])
+
+            list.append(poet)
+        }
+    }
+
+    func initSong() {
+
+        do {
+            let poet = Poet(name: "范仲淹", poemList: [
+                Poem(title: "蘇幕遮",
+                    content: "碧雲天，黃葉地。秋色連波，波上寒煙翠。山映斜陽天接水。芳草無情，更在斜陽外。黯鄉魂，追旅思。夜夜除非，好夢留人睡。明月樓高休獨倚。酒入愁腸，化作相思淚。",
+                    description: ""),
+                Poem(title: "御街行",
+                    content: "紛紛墜葉飄香砌。夜寂靜，寒聲碎。真珠簾卷玉樓空，天淡銀河垂地。年年今夜，月華如練，長是人千里！愁腸已斷無由醉。酒未到，先成淚。殘燈明滅枕頭攲，諳盡孤眠滋味。都來此事，眉間心上，無計相迴避。",
+                    description: "")
+                ])
+
+            list.append(poet)
+        }
+
+        do {
+            let poet = Poet(name: "張先", poemList: [
+                Poem(title: "浣溪沙",
+                    content: "樓倚春江百尺高，煙中還未見歸橈，幾時期信似江潮？花片片飛風弄蝶，柳陰陰下水平橋，日長才過又今宵。",
+                    description: ""),
+                Poem(title: "醉垂鞭",
+                    content: "雙蝶繡羅裙。東池宴，初相見。朱粉不深勻，間花淡淡春。細看諸處好，人人道﹕柳腰身。昨日亂山昏，來時衣上雲。",
+                    description: "")
+                ])
+
+            list.append(poet)
+        }
+
+        do {
+            let poet = Poet(name: "晏殊", poemList: [
+                Poem(title: "浣溪沙",
+                    content: "一曲新詞酒一杯，去年天氣舊亭台，夕陽西下幾時回？無可奈何花落去，似曾相識燕歸來，小園香徑獨徘徊。",
+                    description: ""),
+                Poem(title: "清商怨",
+                    content: "關河愁思望處滿，漸素秋向晚。雁過南雲，行人回淚眼。雙鸞衾裯悔展，夜又永、枕孤人遠。夢未成歸，梅花聞塞管。",
+                    description: "")
+                ])
+
+            list.append(poet)
+        }
+
+        do {
+            let poet = Poet(name: "歐陽修", poemList: [
+                Poem(title: "玉樓春",
+                    content: "洛陽正值芳菲節，穠艷清香相間發。游絲有意苦相縈，垂柳無端爭贈別。杏花紅處青山缺，山畔行人山下歇。今宵誰肯遠相隨？惟有寂寥孤館月。",
+                    description: ""),
+                Poem(title: "望江南",
+                    content: "江南蝶，斜日一雙雙。身似何郎全傅粉，心如韓壽愛偷香，天賦與輕狂。微雨後，薄翅膩煙光。才伴遊蜂來小院，又隨飛絮過東牆，長是為花忙。",
+                    description: "")
                 ])
 
             list.append(poet)
