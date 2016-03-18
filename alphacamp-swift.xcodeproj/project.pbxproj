@@ -32,6 +32,13 @@
 		5BFAD9FD1C9AE07500DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD9FB1C9AE07500DA365A /* Main.storyboard */; };
 		5BFAD9FF1C9AE07500DA365A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD9FE1C9AE07500DA365A /* Assets.xcassets */; };
 		5BFADA021C9AE07500DA365A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFADA001C9AE07500DA365A /* LaunchScreen.storyboard */; };
+		5BFADA0E1C9AE77400DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFADA0D1C9AE77400DA365A /* AppDelegate.swift */; };
+		5BFADA101C9AE77400DA365A /* Nav1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFADA0F1C9AE77400DA365A /* Nav1ViewController.swift */; };
+		5BFADA131C9AE77400DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFADA111C9AE77400DA365A /* Main.storyboard */; };
+		5BFADA151C9AE77400DA365A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFADA141C9AE77400DA365A /* Assets.xcassets */; };
+		5BFADA181C9AE77400DA365A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFADA161C9AE77400DA365A /* LaunchScreen.storyboard */; };
+		5BFADA1E1C9AE80F00DA365A /* Nav2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFADA1D1C9AE80F00DA365A /* Nav2ViewController.swift */; };
+		5BFADA201C9AE82300DA365A /* Nav3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFADA1F1C9AE82300DA365A /* Nav3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +75,15 @@
 		5BFAD9FE1C9AE07500DA365A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BFADA011C9AE07500DA365A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BFADA031C9AE07500DA365A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BFADA0B1C9AE77400DA365A /* navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BFADA0D1C9AE77400DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BFADA0F1C9AE77400DA365A /* Nav1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nav1ViewController.swift; sourceTree = "<group>"; };
+		5BFADA121C9AE77400DA365A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BFADA141C9AE77400DA365A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BFADA171C9AE77400DA365A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BFADA191C9AE77400DA365A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BFADA1D1C9AE80F00DA365A /* Nav2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nav2ViewController.swift; sourceTree = "<group>"; };
+		5BFADA1F1C9AE82300DA365A /* Nav3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nav3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BFADA081C9AE77400DA365A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,6 +132,7 @@
 				5BFAD97A1C929E1400DA365A /* students */,
 				5BFAD9961C98F01B00DA365A /* autolayout */,
 				5BFAD9F61C9AE07500DA365A /* button */,
+				5BFADA0C1C9AE77400DA365A /* navigation */,
 				5BFAD9571C919F4600DA365A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +144,7 @@
 				5BFAD9791C929E1400DA365A /* students.app */,
 				5BFAD9951C98F01B00DA365A /* autolayout.app */,
 				5BFAD9F51C9AE07500DA365A /* button.app */,
+				5BFADA0B1C9AE77400DA365A /* navigation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +205,21 @@
 				5BFADA031C9AE07500DA365A /* Info.plist */,
 			);
 			path = button;
+			sourceTree = "<group>";
+		};
+		5BFADA0C1C9AE77400DA365A /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				5BFADA0D1C9AE77400DA365A /* AppDelegate.swift */,
+				5BFADA0F1C9AE77400DA365A /* Nav1ViewController.swift */,
+				5BFADA1D1C9AE80F00DA365A /* Nav2ViewController.swift */,
+				5BFADA1F1C9AE82300DA365A /* Nav3ViewController.swift */,
+				5BFADA111C9AE77400DA365A /* Main.storyboard */,
+				5BFADA141C9AE77400DA365A /* Assets.xcassets */,
+				5BFADA161C9AE77400DA365A /* LaunchScreen.storyboard */,
+				5BFADA191C9AE77400DA365A /* Info.plist */,
+			);
+			path = navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +293,23 @@
 			productReference = 5BFAD9F51C9AE07500DA365A /* button.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5BFADA0A1C9AE77400DA365A /* navigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BFADA1C1C9AE77400DA365A /* Build configuration list for PBXNativeTarget "navigation" */;
+			buildPhases = (
+				5BFADA071C9AE77400DA365A /* Sources */,
+				5BFADA081C9AE77400DA365A /* Frameworks */,
+				5BFADA091C9AE77400DA365A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = navigation;
+			productName = navigation;
+			productReference = 5BFADA0B1C9AE77400DA365A /* navigation.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -275,6 +332,9 @@
 					5BFAD9F41C9AE07500DA365A = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					5BFADA0A1C9AE77400DA365A = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 5BFAD9511C919F4600DA365A /* Build configuration list for PBXProject "alphacamp-swift" */;
@@ -294,6 +354,7 @@
 				5BFAD9781C929E1400DA365A /* students */,
 				5BFAD9941C98F01B00DA365A /* autolayout */,
 				5BFAD9F41C9AE07500DA365A /* button */,
+				5BFADA0A1C9AE77400DA365A /* navigation */,
 			);
 		};
 /* End PBXProject section */
@@ -339,6 +400,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BFADA091C9AE77400DA365A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BFADA181C9AE77400DA365A /* LaunchScreen.storyboard in Resources */,
+				5BFADA151C9AE77400DA365A /* Assets.xcassets in Resources */,
+				5BFADA131C9AE77400DA365A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -380,6 +451,17 @@
 			files = (
 				5BFAD9FA1C9AE07500DA365A /* BtnViewController.swift in Sources */,
 				5BFAD9F81C9AE07500DA365A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BFADA071C9AE77400DA365A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BFADA101C9AE77400DA365A /* Nav1ViewController.swift in Sources */,
+				5BFADA0E1C9AE77400DA365A /* AppDelegate.swift in Sources */,
+				5BFADA201C9AE82300DA365A /* Nav3ViewController.swift in Sources */,
+				5BFADA1E1C9AE80F00DA365A /* Nav2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +528,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				5BFADA011C9AE07500DA365A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5BFADA111C9AE77400DA365A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BFADA121C9AE77400DA365A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BFADA161C9AE77400DA365A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BFADA171C9AE77400DA365A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -622,6 +720,28 @@
 			};
 			name = Release;
 		};
+		5BFADA1A1C9AE77400DA365A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = navigation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.navigation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BFADA1B1C9AE77400DA365A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = navigation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.navigation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -666,6 +786,15 @@
 			buildConfigurations = (
 				5BFADA041C9AE07500DA365A /* Debug */,
 				5BFADA051C9AE07500DA365A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BFADA1C1C9AE77400DA365A /* Build configuration list for PBXNativeTarget "navigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BFADA1A1C9AE77400DA365A /* Debug */,
+				5BFADA1B1C9AE77400DA365A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
