@@ -13,6 +13,11 @@
 		5B2E614D1C9F953600A4E8D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B2E614C1C9F953600A4E8D6 /* Assets.xcassets */; };
 		5B2E61501C9F953600A4E8D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2E614E1C9F953600A4E8D6 /* LaunchScreen.storyboard */; };
 		5B85367F1C9FABA700FACDC0 /* poem.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B85367E1C9FABA700FACDC0 /* poem.txt */; };
+		5B8536981C9FD39F00FACDC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536971C9FD39F00FACDC0 /* AppDelegate.swift */; };
+		5B85369A1C9FD39F00FACDC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536991C9FD39F00FACDC0 /* ViewController.swift */; };
+		5B85369D1C9FD39F00FACDC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B85369B1C9FD39F00FACDC0 /* Main.storyboard */; };
+		5B85369F1C9FD39F00FACDC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B85369E1C9FD39F00FACDC0 /* Assets.xcassets */; };
+		5B8536A21C9FD39F00FACDC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8536A01C9FD39F00FACDC0 /* LaunchScreen.storyboard */; };
 		5BFAD95A1C919F4600DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD9591C919F4600DA365A /* AppDelegate.swift */; };
 		5BFAD95C1C919F4600DA365A /* PoetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */; };
 		5BFAD95F1C919F4600DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD95D1C919F4600DA365A /* Main.storyboard */; };
@@ -61,6 +66,13 @@
 		5B2E614F1C9F953600A4E8D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B2E61511C9F953600A4E8D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B85367E1C9FABA700FACDC0 /* poem.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = poem.txt; sourceTree = "<group>"; };
+		5B8536951C9FD39F00FACDC0 /* alphacamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alphacamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8536971C9FD39F00FACDC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B8536991C9FD39F00FACDC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B85369C1C9FD39F00FACDC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B85369E1C9FD39F00FACDC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B8536A11C9FD39F00FACDC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B8536A31C9FD39F00FACDC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BFAD9561C919F4600DA365A /* poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFAD9591C919F4600DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetListViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +126,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		5B2E61401C9F953600A4E8D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8536921C9FD39F00FACDC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -179,6 +198,19 @@
 			path = alert;
 			sourceTree = "<group>";
 		};
+		5B8536961C9FD39F00FACDC0 /* alphacamp */ = {
+			isa = PBXGroup;
+			children = (
+				5B8536971C9FD39F00FACDC0 /* AppDelegate.swift */,
+				5B8536991C9FD39F00FACDC0 /* ViewController.swift */,
+				5B85369B1C9FD39F00FACDC0 /* Main.storyboard */,
+				5B85369E1C9FD39F00FACDC0 /* Assets.xcassets */,
+				5B8536A01C9FD39F00FACDC0 /* LaunchScreen.storyboard */,
+				5B8536A31C9FD39F00FACDC0 /* Info.plist */,
+			);
+			path = alphacamp;
+			sourceTree = "<group>";
+		};
 		5BFAD94D1C919F4600DA365A = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +221,7 @@
 				5BFADA0C1C9AE77400DA365A /* navigation */,
 				5BFADA261C9B944A00DA365A /* ebook */,
 				5B2E61441C9F953600A4E8D6 /* alert */,
+				5B8536961C9FD39F00FACDC0 /* alphacamp */,
 				5BFAD9571C919F4600DA365A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -203,6 +236,7 @@
 				5BFADA0B1C9AE77400DA365A /* navigation.app */,
 				5BFADA251C9B944A00DA365A /* ebook.app */,
 				5B2E61431C9F953600A4E8D6 /* alert.app */,
+				5B8536951C9FD39F00FACDC0 /* alphacamp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -311,6 +345,23 @@
 			name = alert;
 			productName = alert;
 			productReference = 5B2E61431C9F953600A4E8D6 /* alert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B8536941C9FD39F00FACDC0 /* alphacamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B8536A41C9FD39F00FACDC0 /* Build configuration list for PBXNativeTarget "alphacamp" */;
+			buildPhases = (
+				5B8536911C9FD39F00FACDC0 /* Sources */,
+				5B8536921C9FD39F00FACDC0 /* Frameworks */,
+				5B8536931C9FD39F00FACDC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = alphacamp;
+			productName = alphacamp;
+			productReference = 5B8536951C9FD39F00FACDC0 /* alphacamp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5BFAD9551C919F4600DA365A /* poems */ = {
@@ -428,6 +479,9 @@
 					5B2E61421C9F953600A4E8D6 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					5B8536941C9FD39F00FACDC0 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					5BFAD9551C919F4600DA365A = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -468,6 +522,7 @@
 				5BFADA0A1C9AE77400DA365A /* navigation */,
 				5BFADA241C9B944A00DA365A /* ebook */,
 				5B2E61421C9F953600A4E8D6 /* alert */,
+				5B8536941C9FD39F00FACDC0 /* alphacamp */,
 			);
 		};
 /* End PBXProject section */
@@ -481,6 +536,16 @@
 				5B2E614D1C9F953600A4E8D6 /* Assets.xcassets in Resources */,
 				5B2E614B1C9F953600A4E8D6 /* Main.storyboard in Resources */,
 				5B85367F1C9FABA700FACDC0 /* poem.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8536931C9FD39F00FACDC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B8536A21C9FD39F00FACDC0 /* LaunchScreen.storyboard in Resources */,
+				5B85369F1C9FD39F00FACDC0 /* Assets.xcassets in Resources */,
+				5B85369D1C9FD39F00FACDC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +618,15 @@
 			files = (
 				5B2E61481C9F953600A4E8D6 /* AlertViewController.swift in Sources */,
 				5B2E61461C9F953600A4E8D6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8536911C9FD39F00FACDC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B85369A1C9FD39F00FACDC0 /* ViewController.swift in Sources */,
+				5B8536981C9FD39F00FACDC0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +706,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				5B2E614F1C9F953600A4E8D6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5B85369B1C9FD39F00FACDC0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B85369C1C9FD39F00FACDC0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B8536A01C9FD39F00FACDC0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B8536A11C9FD39F00FACDC0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -757,6 +847,28 @@
 			};
 			name = Release;
 		};
+		5B8536A51C9FD39F00FACDC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = alphacamp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.alphacamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5B8536A61C9FD39F00FACDC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = alphacamp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.alphacamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		5BFAD9661C919F4600DA365A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -844,7 +956,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "alphacamp-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tw.frb.alphacamp-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.poems;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -855,7 +967,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "alphacamp-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tw.frb.alphacamp-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.poems;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -981,6 +1093,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5B8536A41C9FD39F00FACDC0 /* Build configuration list for PBXNativeTarget "alphacamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B8536A51C9FD39F00FACDC0 /* Debug */,
+				5B8536A61C9FD39F00FACDC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		5BFAD9511C919F4600DA365A /* Build configuration list for PBXProject "alphacamp-swift" */ = {
 			isa = XCConfigurationList;
