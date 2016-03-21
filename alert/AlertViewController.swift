@@ -21,6 +21,32 @@ class AlertViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        askWithAlert()
+    }
+    
+    func askWithAlert() {
+        let alert = UIAlertController(title: "問題", message: "想不想談戀愛", preferredStyle: .Alert)
+        let actYes = UIAlertAction(title: "Yes", style: .Default, handler: askWithActionSheet)
+        let actNo = UIAlertAction(title: "No", style: .Cancel, handler: nil)
+
+        alert.addAction(actYes)
+        alert.addAction(actNo)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
+
+    func askWithActionSheet(action: UIAlertAction) {
+        let actSheet = UIAlertController(title: "問題", message: "願意跟誰談戀愛", preferredStyle: .ActionSheet)
+        let actOne = UIAlertAction(title: "左手", style: .Default, handler: nil)
+        let actTwo = UIAlertAction(title: "右手", style: .Cancel, handler: nil)
+        
+        actSheet.addAction(actOne)
+        actSheet.addAction(actTwo)
+
+        presentViewController(actSheet, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -28,12 +54,12 @@ class AlertViewController: UIViewController {
     }
 
     @IBAction func showAlert(sender: AnyObject) {
-        let ctrler = UIAlertController(title: "Warning", message: "Don't touch me!", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Warning", message: "Don't touch me!", preferredStyle: .Alert)
         let action = UIAlertAction(title: "Close", style: .Cancel, handler: nil)
 
-        ctrler.addAction(action)
+        alert.addAction(action)
 
-        presentViewController(ctrler, animated: true, completion: nil)
+        presentViewController(alert, animated: true, completion: nil)
     }
 
 }
