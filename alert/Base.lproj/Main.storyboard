@@ -47,5 +47,78 @@
                 </tapGestureRecognizer>
             </objects>
         </scene>
+        <!--File View Controller-->
+        <scene sceneID="ci6-8P-65U">
+            <objects>
+                <viewController id="BlW-vv-bve" customClass="FileViewController" customModule="alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZZM-Ym-SpL"/>
+                        <viewControllerLayoutGuide type="bottom" id="nAC-Ze-bOm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="11X-Ky-Hu9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w3y-Q5-bUg">
+                                <rect key="frame" x="20" y="90" width="280" height="458"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" id="dZs-Eb-mBG">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dZs-Eb-mBG" id="guh-ak-hIq">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BlW-vv-bve" id="53a-2o-2Ku"/>
+                                    <outlet property="delegate" destination="BlW-vv-bve" id="Mi4-S4-vMt"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yh-SL-swR">
+                                <rect key="frame" x="20" y="40" width="30" height="30"/>
+                                <state key="normal" title="新增"/>
+                                <connections>
+                                    <action selector="newItem:" destination="BlW-vv-bve" eventType="touchUpInside" id="t6d-bP-8fN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWw-wF-Scj">
+                                <rect key="frame" x="270" y="40" width="30" height="30"/>
+                                <state key="normal" title="清除"/>
+                                <connections>
+                                    <action selector="clearItem:" destination="BlW-vv-bve" eventType="touchUpInside" id="8qe-Pm-jVa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w3y-Q5-bUg" firstAttribute="leading" secondItem="11X-Ky-Hu9" secondAttribute="leading" constant="20" id="05e-Is-euM"/>
+                            <constraint firstItem="0Yh-SL-swR" firstAttribute="top" secondItem="ZZM-Ym-SpL" secondAttribute="bottom" constant="20" id="7ei-xz-Heb"/>
+                            <constraint firstItem="XWw-wF-Scj" firstAttribute="top" secondItem="ZZM-Ym-SpL" secondAttribute="bottom" constant="20" id="7o2-XB-esS"/>
+                            <constraint firstItem="0Yh-SL-swR" firstAttribute="centerX" secondItem="11X-Ky-Hu9" secondAttribute="centerX" id="FiP-3P-Mdy"/>
+                            <constraint firstItem="0Yh-SL-swR" firstAttribute="leading" secondItem="11X-Ky-Hu9" secondAttribute="leading" constant="20" id="IDM-hz-90e"/>
+                            <constraint firstAttribute="trailing" secondItem="w3y-Q5-bUg" secondAttribute="trailing" constant="20" id="Qi6-HT-HL5"/>
+                            <constraint firstItem="w3y-Q5-bUg" firstAttribute="top" secondItem="0Yh-SL-swR" secondAttribute="bottom" constant="20" id="W4w-ri-2Ru"/>
+                            <constraint firstItem="nAC-Ze-bOm" firstAttribute="top" secondItem="w3y-Q5-bUg" secondAttribute="bottom" constant="20" id="c8K-n0-wod"/>
+                            <constraint firstItem="w3y-Q5-bUg" firstAttribute="top" secondItem="XWw-wF-Scj" secondAttribute="bottom" constant="20" id="nzu-u0-xy9"/>
+                            <constraint firstAttribute="trailing" secondItem="XWw-wF-Scj" secondAttribute="trailing" constant="20" id="qFr-g6-ID3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FiP-3P-Mdy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="itemTableView" destination="w3y-Q5-bUg" id="TGP-cx-dND"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r08-rj-v6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="311"/>
+        </scene>
     </scenes>
 </document>

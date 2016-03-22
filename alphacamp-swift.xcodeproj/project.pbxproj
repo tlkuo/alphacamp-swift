@@ -22,6 +22,7 @@
 		5B8536AA1C9FE9CC00FACDC0 /* ACLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536A91C9FE9CC00FACDC0 /* ACLoginViewController.swift */; };
 		5B8536AD1C9FEA3F00FACDC0 /* ACLoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536AC1C9FEA3F00FACDC0 /* ACLoginFormViewController.swift */; };
 		5B8536AF1C9FF8B000FACDC0 /* ACLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536AE1C9FF8B000FACDC0 /* ACLoginHandler.swift */; };
+		5B8536B11CA0EB5700FACDC0 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536B01CA0EB5700FACDC0 /* FileViewController.swift */; };
 		5BFAD95A1C919F4600DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD9591C919F4600DA365A /* AppDelegate.swift */; };
 		5BFAD95C1C919F4600DA365A /* PoetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */; };
 		5BFAD95F1C919F4600DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD95D1C919F4600DA365A /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 		5B8536A91C9FE9CC00FACDC0 /* ACLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLoginViewController.swift; sourceTree = "<group>"; };
 		5B8536AC1C9FEA3F00FACDC0 /* ACLoginFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLoginFormViewController.swift; sourceTree = "<group>"; };
 		5B8536AE1C9FF8B000FACDC0 /* ACLoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLoginHandler.swift; sourceTree = "<group>"; };
+		5B8536B01CA0EB5700FACDC0 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 		5BFAD9561C919F4600DA365A /* poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFAD9591C919F4600DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetListViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				5B2E61451C9F953600A4E8D6 /* AppDelegate.swift */,
 				5B2E61471C9F953600A4E8D6 /* AlertViewController.swift */,
+				5B8536B01CA0EB5700FACDC0 /* FileViewController.swift */,
 				5B2E61491C9F953600A4E8D6 /* Main.storyboard */,
 				5B2E614C1C9F953600A4E8D6 /* Assets.xcassets */,
 				5B2E614E1C9F953600A4E8D6 /* LaunchScreen.storyboard */,
@@ -637,6 +640,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8536B11CA0EB5700FACDC0 /* FileViewController.swift in Sources */,
 				5B2E61481C9F953600A4E8D6 /* AlertViewController.swift in Sources */,
 				5B2E61461C9F953600A4E8D6 /* AppDelegate.swift in Sources */,
 			);
