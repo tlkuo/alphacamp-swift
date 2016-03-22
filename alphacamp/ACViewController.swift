@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ACViewController.swift
 //  alphacamp
 //
 //  Created by martin on 2016/3/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ACViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
