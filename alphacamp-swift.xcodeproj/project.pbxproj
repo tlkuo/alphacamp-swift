@@ -23,6 +23,15 @@
 		5B8536AD1C9FEA3F00FACDC0 /* ACLoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536AC1C9FEA3F00FACDC0 /* ACLoginFormViewController.swift */; };
 		5B8536AF1C9FF8B000FACDC0 /* ACLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536AE1C9FF8B000FACDC0 /* ACLoginHandler.swift */; };
 		5B8536B11CA0EB5700FACDC0 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536B01CA0EB5700FACDC0 /* FileViewController.swift */; };
+		5B8537D01CA27FE900FACDC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537CF1CA27FE900FACDC0 /* AppDelegate.swift */; };
+		5B8537D21CA27FE900FACDC0 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537D11CA27FE900FACDC0 /* DataViewController.swift */; };
+		5B8537D51CA27FE900FACDC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8537D31CA27FE900FACDC0 /* Main.storyboard */; };
+		5B8537D81CA27FE900FACDC0 /* data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537D61CA27FE900FACDC0 /* data.xcdatamodeld */; };
+		5B8537DA1CA27FE900FACDC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8537D91CA27FE900FACDC0 /* Assets.xcassets */; };
+		5B8537DD1CA27FE900FACDC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8537DB1CA27FE900FACDC0 /* LaunchScreen.storyboard */; };
+		5B8537E41CA2867300FACDC0 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537E21CA2867300FACDC0 /* Book+CoreDataProperties.swift */; };
+		5B8537E51CA2867300FACDC0 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537E31CA2867300FACDC0 /* Book.swift */; };
+		5B8537EE1CA2BFF200FACDC0 /* DataFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537ED1CA2BFF200FACDC0 /* DataFormViewController.swift */; };
 		5BFAD95A1C919F4600DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD9591C919F4600DA365A /* AppDelegate.swift */; };
 		5BFAD95C1C919F4600DA365A /* PoetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */; };
 		5BFAD95F1C919F4600DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD95D1C919F4600DA365A /* Main.storyboard */; };
@@ -83,6 +92,17 @@
 		5B8536AC1C9FEA3F00FACDC0 /* ACLoginFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLoginFormViewController.swift; sourceTree = "<group>"; };
 		5B8536AE1C9FF8B000FACDC0 /* ACLoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLoginHandler.swift; sourceTree = "<group>"; };
 		5B8536B01CA0EB5700FACDC0 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		5B8537CD1CA27FE900FACDC0 /* data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = data.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8537CF1CA27FE900FACDC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B8537D11CA27FE900FACDC0 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		5B8537D41CA27FE900FACDC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B8537D71CA27FE900FACDC0 /* data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = data.xcdatamodel; sourceTree = "<group>"; };
+		5B8537D91CA27FE900FACDC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B8537DC1CA27FE900FACDC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B8537DE1CA27FE900FACDC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B8537E21CA2867300FACDC0 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5B8537E31CA2867300FACDC0 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		5B8537ED1CA2BFF200FACDC0 /* DataFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFormViewController.swift; sourceTree = "<group>"; };
 		5BFAD9561C919F4600DA365A /* poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFAD9591C919F4600DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetListViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +163,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5B8536921C9FD39F00FACDC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8537CA1CA27FE900FACDC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -234,6 +261,23 @@
 			name = login;
 			sourceTree = "<group>";
 		};
+		5B8537CE1CA27FE900FACDC0 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				5B8537CF1CA27FE900FACDC0 /* AppDelegate.swift */,
+				5B8537D11CA27FE900FACDC0 /* DataViewController.swift */,
+				5B8537ED1CA2BFF200FACDC0 /* DataFormViewController.swift */,
+				5B8537D31CA27FE900FACDC0 /* Main.storyboard */,
+				5B8537D91CA27FE900FACDC0 /* Assets.xcassets */,
+				5B8537DB1CA27FE900FACDC0 /* LaunchScreen.storyboard */,
+				5B8537DE1CA27FE900FACDC0 /* Info.plist */,
+				5B8537D61CA27FE900FACDC0 /* data.xcdatamodeld */,
+				5B8537E21CA2867300FACDC0 /* Book+CoreDataProperties.swift */,
+				5B8537E31CA2867300FACDC0 /* Book.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		5BFAD94D1C919F4600DA365A = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +289,7 @@
 				5BFADA261C9B944A00DA365A /* ebook */,
 				5B2E61441C9F953600A4E8D6 /* alert */,
 				5B8536961C9FD39F00FACDC0 /* alphacamp */,
+				5B8537CE1CA27FE900FACDC0 /* data */,
 				5BFAD9571C919F4600DA365A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -260,6 +305,7 @@
 				5BFADA251C9B944A00DA365A /* ebook.app */,
 				5B2E61431C9F953600A4E8D6 /* alert.app */,
 				5B8536951C9FD39F00FACDC0 /* alphacamp.app */,
+				5B8537CD1CA27FE900FACDC0 /* data.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -387,6 +433,23 @@
 			productReference = 5B8536951C9FD39F00FACDC0 /* alphacamp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5B8537CC1CA27FE900FACDC0 /* data */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B8537E11CA27FE900FACDC0 /* Build configuration list for PBXNativeTarget "data" */;
+			buildPhases = (
+				5B8537C91CA27FE900FACDC0 /* Sources */,
+				5B8537CA1CA27FE900FACDC0 /* Frameworks */,
+				5B8537CB1CA27FE900FACDC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = data;
+			productName = data;
+			productReference = 5B8537CD1CA27FE900FACDC0 /* data.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5BFAD9551C919F4600DA365A /* poems */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BFAD9681C919F4600DA365A /* Build configuration list for PBXNativeTarget "poems" */;
@@ -505,6 +568,9 @@
 					5B8536941C9FD39F00FACDC0 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					5B8537CC1CA27FE900FACDC0 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					5BFAD9551C919F4600DA365A = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -546,6 +612,7 @@
 				5BFADA241C9B944A00DA365A /* ebook */,
 				5B2E61421C9F953600A4E8D6 /* alert */,
 				5B8536941C9FD39F00FACDC0 /* alphacamp */,
+				5B8537CC1CA27FE900FACDC0 /* data */,
 			);
 		};
 /* End PBXProject section */
@@ -570,6 +637,16 @@
 				5B8536A21C9FD39F00FACDC0 /* LaunchScreen.storyboard in Resources */,
 				5B85369F1C9FD39F00FACDC0 /* Assets.xcassets in Resources */,
 				5B85369D1C9FD39F00FACDC0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8537CB1CA27FE900FACDC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B8537DD1CA27FE900FACDC0 /* LaunchScreen.storyboard in Resources */,
+				5B8537DA1CA27FE900FACDC0 /* Assets.xcassets in Resources */,
+				5B8537D51CA27FE900FACDC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +732,19 @@
 				5B85369A1C9FD39F00FACDC0 /* ACViewController.swift in Sources */,
 				5B8536AD1C9FEA3F00FACDC0 /* ACLoginFormViewController.swift in Sources */,
 				5B8536981C9FD39F00FACDC0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8537C91CA27FE900FACDC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B8537EE1CA2BFF200FACDC0 /* DataFormViewController.swift in Sources */,
+				5B8537D21CA27FE900FACDC0 /* DataViewController.swift in Sources */,
+				5B8537D01CA27FE900FACDC0 /* AppDelegate.swift in Sources */,
+				5B8537E41CA2867300FACDC0 /* Book+CoreDataProperties.swift in Sources */,
+				5B8537E51CA2867300FACDC0 /* Book.swift in Sources */,
+				5B8537D81CA27FE900FACDC0 /* data.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,6 +840,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				5B8536A11C9FD39F00FACDC0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5B8537D31CA27FE900FACDC0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B8537D41CA27FE900FACDC0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B8537DB1CA27FE900FACDC0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B8537DC1CA27FE900FACDC0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -893,6 +999,28 @@
 				INFOPLIST_FILE = alphacamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.alphacamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5B8537DF1CA27FE900FACDC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = data/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.data;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5B8537E01CA27FE900FACDC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = data/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.data;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1129,6 +1257,15 @@
 				5B8536A61C9FD39F00FACDC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B8537E11CA27FE900FACDC0 /* Build configuration list for PBXNativeTarget "data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B8537DF1CA27FE900FACDC0 /* Debug */,
+				5B8537E01CA27FE900FACDC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		5BFAD9511C919F4600DA365A /* Build configuration list for PBXProject "alphacamp-swift" */ = {
 			isa = XCConfigurationList;
@@ -1194,6 +1331,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5B8537D61CA27FE900FACDC0 /* data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5B8537D71CA27FE900FACDC0 /* data.xcdatamodel */,
+			);
+			currentVersion = 5B8537D71CA27FE900FACDC0 /* data.xcdatamodel */;
+			path = data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5BFAD94E1C919F4600DA365A /* Project object */;
 }
