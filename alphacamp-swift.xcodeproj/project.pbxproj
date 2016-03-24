@@ -32,6 +32,12 @@
 		5B8537E41CA2867300FACDC0 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537E21CA2867300FACDC0 /* Book+CoreDataProperties.swift */; };
 		5B8537E51CA2867300FACDC0 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537E31CA2867300FACDC0 /* Book.swift */; };
 		5B8537EE1CA2BFF200FACDC0 /* DataFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537ED1CA2BFF200FACDC0 /* DataFormViewController.swift */; };
+		5BED56CA1CA380F3003D73AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED56C91CA380F3003D73AD /* AppDelegate.swift */; };
+		5BED56CC1CA380F3003D73AD /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED56CB1CA380F3003D73AD /* GestureViewController.swift */; };
+		5BED56CF1CA380F3003D73AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56CD1CA380F3003D73AD /* Main.storyboard */; };
+		5BED56D11CA380F3003D73AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56D01CA380F3003D73AD /* Assets.xcassets */; };
+		5BED56D41CA380F3003D73AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56D21CA380F3003D73AD /* LaunchScreen.storyboard */; };
+		5BED56DA1CA388B5003D73AD /* RecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED56D91CA388B5003D73AD /* RecView.swift */; };
 		5BFAD95A1C919F4600DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD9591C919F4600DA365A /* AppDelegate.swift */; };
 		5BFAD95C1C919F4600DA365A /* PoetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */; };
 		5BFAD95F1C919F4600DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD95D1C919F4600DA365A /* Main.storyboard */; };
@@ -103,6 +109,14 @@
 		5B8537E21CA2867300FACDC0 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5B8537E31CA2867300FACDC0 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		5B8537ED1CA2BFF200FACDC0 /* DataFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFormViewController.swift; sourceTree = "<group>"; };
+		5BED56C71CA380F3003D73AD /* gesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BED56C91CA380F3003D73AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BED56CB1CA380F3003D73AD /* GestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
+		5BED56CE1CA380F3003D73AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BED56D01CA380F3003D73AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BED56D31CA380F3003D73AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BED56D51CA380F3003D73AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BED56D91CA388B5003D73AD /* RecView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecView.swift; sourceTree = "<group>"; };
 		5BFAD9561C919F4600DA365A /* poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFAD9591C919F4600DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetListViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +184,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5B8537CA1CA27FE900FACDC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BED56C41CA380F3003D73AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -278,6 +299,20 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		5BED56C81CA380F3003D73AD /* gesture */ = {
+			isa = PBXGroup;
+			children = (
+				5BED56C91CA380F3003D73AD /* AppDelegate.swift */,
+				5BED56CB1CA380F3003D73AD /* GestureViewController.swift */,
+				5BED56D91CA388B5003D73AD /* RecView.swift */,
+				5BED56CD1CA380F3003D73AD /* Main.storyboard */,
+				5BED56D01CA380F3003D73AD /* Assets.xcassets */,
+				5BED56D21CA380F3003D73AD /* LaunchScreen.storyboard */,
+				5BED56D51CA380F3003D73AD /* Info.plist */,
+			);
+			path = gesture;
+			sourceTree = "<group>";
+		};
 		5BFAD94D1C919F4600DA365A = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +325,7 @@
 				5B2E61441C9F953600A4E8D6 /* alert */,
 				5B8536961C9FD39F00FACDC0 /* alphacamp */,
 				5B8537CE1CA27FE900FACDC0 /* data */,
+				5BED56C81CA380F3003D73AD /* gesture */,
 				5BFAD9571C919F4600DA365A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -306,6 +342,7 @@
 				5B2E61431C9F953600A4E8D6 /* alert.app */,
 				5B8536951C9FD39F00FACDC0 /* alphacamp.app */,
 				5B8537CD1CA27FE900FACDC0 /* data.app */,
+				5BED56C71CA380F3003D73AD /* gesture.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -450,6 +487,23 @@
 			productReference = 5B8537CD1CA27FE900FACDC0 /* data.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5BED56C61CA380F3003D73AD /* gesture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BED56D81CA380F3003D73AD /* Build configuration list for PBXNativeTarget "gesture" */;
+			buildPhases = (
+				5BED56C31CA380F3003D73AD /* Sources */,
+				5BED56C41CA380F3003D73AD /* Frameworks */,
+				5BED56C51CA380F3003D73AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gesture;
+			productName = gesture;
+			productReference = 5BED56C71CA380F3003D73AD /* gesture.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5BFAD9551C919F4600DA365A /* poems */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BFAD9681C919F4600DA365A /* Build configuration list for PBXNativeTarget "poems" */;
@@ -558,7 +612,7 @@
 		5BFAD94E1C919F4600DA365A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Frainbow;
 				TargetAttributes = {
@@ -570,6 +624,9 @@
 					};
 					5B8537CC1CA27FE900FACDC0 = {
 						CreatedOnToolsVersion = 7.2.1;
+					};
+					5BED56C61CA380F3003D73AD = {
+						CreatedOnToolsVersion = 7.3;
 					};
 					5BFAD9551C919F4600DA365A = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -613,6 +670,7 @@
 				5B2E61421C9F953600A4E8D6 /* alert */,
 				5B8536941C9FD39F00FACDC0 /* alphacamp */,
 				5B8537CC1CA27FE900FACDC0 /* data */,
+				5BED56C61CA380F3003D73AD /* gesture */,
 			);
 		};
 /* End PBXProject section */
@@ -647,6 +705,16 @@
 				5B8537DD1CA27FE900FACDC0 /* LaunchScreen.storyboard in Resources */,
 				5B8537DA1CA27FE900FACDC0 /* Assets.xcassets in Resources */,
 				5B8537D51CA27FE900FACDC0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BED56C51CA380F3003D73AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BED56D41CA380F3003D73AD /* LaunchScreen.storyboard in Resources */,
+				5BED56D11CA380F3003D73AD /* Assets.xcassets in Resources */,
+				5BED56CF1CA380F3003D73AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +813,16 @@
 				5B8537E41CA2867300FACDC0 /* Book+CoreDataProperties.swift in Sources */,
 				5B8537E51CA2867300FACDC0 /* Book.swift in Sources */,
 				5B8537D81CA27FE900FACDC0 /* data.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BED56C31CA380F3003D73AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BED56DA1CA388B5003D73AD /* RecView.swift in Sources */,
+				5BED56CC1CA380F3003D73AD /* GestureViewController.swift in Sources */,
+				5BED56CA1CA380F3003D73AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +934,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				5B8537DC1CA27FE900FACDC0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5BED56CD1CA380F3003D73AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BED56CE1CA380F3003D73AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BED56D21CA380F3003D73AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BED56D31CA380F3003D73AD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1021,6 +1115,32 @@
 				INFOPLIST_FILE = data/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.data;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5BED56D61CA380F3003D73AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = gesture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.gesture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BED56D71CA380F3003D73AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = gesture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.gesture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1264,6 +1384,15 @@
 			buildConfigurations = (
 				5B8537DF1CA27FE900FACDC0 /* Debug */,
 				5B8537E01CA27FE900FACDC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BED56D81CA380F3003D73AD /* Build configuration list for PBXNativeTarget "gesture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BED56D61CA380F3003D73AD /* Debug */,
+				5BED56D71CA380F3003D73AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
