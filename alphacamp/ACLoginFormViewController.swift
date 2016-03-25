@@ -13,12 +13,13 @@ class ACLoginFormViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     
-    let loginHandler: ACLoginHandler = ACLoginHandler()
-
+    var loginHandler: ACLoginHandler?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loginBtn.layer.cornerRadius = 5
+        loginHandler = ACLoginHandler(delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,8 +41,20 @@ class ACLoginFormViewController: UIViewController {
     @IBAction func submitForm(sender: AnyObject) {
 
         if let email = emailField.text, password = passwordField.text {
-            loginHandler.login(email, password: password)
+            loginHandler?.login(email, password: password)
         }
     }
 
 }
+
+extension ACLoginFormViewController: ACLoginDelegate {
+
+    func loginSuccess(token: String) {
+        print("login success")
+    }
+
+    func loginFail(message: String) {
+        print("login fail: \(message)")
+    }
+}
+

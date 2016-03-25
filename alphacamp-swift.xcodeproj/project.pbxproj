@@ -38,6 +38,7 @@
 		5BED56D11CA380F3003D73AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56D01CA380F3003D73AD /* Assets.xcassets */; };
 		5BED56D41CA380F3003D73AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56D21CA380F3003D73AD /* LaunchScreen.storyboard */; };
 		5BED56DA1CA388B5003D73AD /* RecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED56D91CA388B5003D73AD /* RecView.swift */; };
+		5BED56DC1CA3D678003D73AD /* Dojo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56DB1CA3D678003D73AD /* Dojo.plist */; };
 		5BFAD95A1C919F4600DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD9591C919F4600DA365A /* AppDelegate.swift */; };
 		5BFAD95C1C919F4600DA365A /* PoetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */; };
 		5BFAD95F1C919F4600DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD95D1C919F4600DA365A /* Main.storyboard */; };
@@ -117,6 +118,7 @@
 		5BED56D31CA380F3003D73AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BED56D51CA380F3003D73AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BED56D91CA388B5003D73AD /* RecView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecView.swift; sourceTree = "<group>"; };
+		5BED56DB1CA3D678003D73AD /* Dojo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dojo.plist; sourceTree = "<group>"; };
 		5BFAD9561C919F4600DA365A /* poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFAD9591C919F4600DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetListViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				5B85369E1C9FD39F00FACDC0 /* Assets.xcassets */,
 				5B8536A01C9FD39F00FACDC0 /* LaunchScreen.storyboard */,
 				5B8536A31C9FD39F00FACDC0 /* Info.plist */,
+				5BED56DB1CA3D678003D73AD /* Dojo.plist */,
 			);
 			path = alphacamp;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				5B8536A81C9FE80200FACDC0 /* Login.storyboard in Resources */,
 				5B8536A21C9FD39F00FACDC0 /* LaunchScreen.storyboard in Resources */,
 				5B85369F1C9FD39F00FACDC0 /* Assets.xcassets in Resources */,
+				5BED56DC1CA3D678003D73AD /* Dojo.plist in Resources */,
 				5B85369D1C9FD39F00FACDC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1395,6 +1399,7 @@
 				5BED56D71CA380F3003D73AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BFAD9511C919F4600DA365A /* Build configuration list for PBXProject "alphacamp-swift" */ = {
 			isa = XCConfigurationList;
