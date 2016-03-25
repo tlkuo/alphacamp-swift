@@ -39,6 +39,11 @@
 		5BED56D41CA380F3003D73AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56D21CA380F3003D73AD /* LaunchScreen.storyboard */; };
 		5BED56DA1CA388B5003D73AD /* RecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED56D91CA388B5003D73AD /* RecView.swift */; };
 		5BED56DC1CA3D678003D73AD /* Dojo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56DB1CA3D678003D73AD /* Dojo.plist */; };
+		5BED56E41CA4D3A6003D73AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED56E31CA4D3A6003D73AD /* AppDelegate.swift */; };
+		5BED56E61CA4D3A6003D73AD /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED56E51CA4D3A6003D73AD /* NetworkViewController.swift */; };
+		5BED56E91CA4D3A6003D73AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56E71CA4D3A6003D73AD /* Main.storyboard */; };
+		5BED56EB1CA4D3A6003D73AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56EA1CA4D3A6003D73AD /* Assets.xcassets */; };
+		5BED56EE1CA4D3A6003D73AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BED56EC1CA4D3A6003D73AD /* LaunchScreen.storyboard */; };
 		5BFAD95A1C919F4600DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD9591C919F4600DA365A /* AppDelegate.swift */; };
 		5BFAD95C1C919F4600DA365A /* PoetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */; };
 		5BFAD95F1C919F4600DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD95D1C919F4600DA365A /* Main.storyboard */; };
@@ -119,6 +124,13 @@
 		5BED56D51CA380F3003D73AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BED56D91CA388B5003D73AD /* RecView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecView.swift; sourceTree = "<group>"; };
 		5BED56DB1CA3D678003D73AD /* Dojo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dojo.plist; sourceTree = "<group>"; };
+		5BED56E11CA4D3A6003D73AD /* network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = network.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BED56E31CA4D3A6003D73AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BED56E51CA4D3A6003D73AD /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
+		5BED56E81CA4D3A6003D73AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BED56EA1CA4D3A6003D73AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BED56ED1CA4D3A6003D73AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BED56EF1CA4D3A6003D73AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BFAD9561C919F4600DA365A /* poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFAD9591C919F4600DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetListViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +205,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5BED56C41CA380F3003D73AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BED56DE1CA4D3A6003D73AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,6 +335,19 @@
 			path = gesture;
 			sourceTree = "<group>";
 		};
+		5BED56E21CA4D3A6003D73AD /* network */ = {
+			isa = PBXGroup;
+			children = (
+				5BED56E31CA4D3A6003D73AD /* AppDelegate.swift */,
+				5BED56E51CA4D3A6003D73AD /* NetworkViewController.swift */,
+				5BED56E71CA4D3A6003D73AD /* Main.storyboard */,
+				5BED56EA1CA4D3A6003D73AD /* Assets.xcassets */,
+				5BED56EC1CA4D3A6003D73AD /* LaunchScreen.storyboard */,
+				5BED56EF1CA4D3A6003D73AD /* Info.plist */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		5BFAD94D1C919F4600DA365A = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +361,7 @@
 				5B8536961C9FD39F00FACDC0 /* alphacamp */,
 				5B8537CE1CA27FE900FACDC0 /* data */,
 				5BED56C81CA380F3003D73AD /* gesture */,
+				5BED56E21CA4D3A6003D73AD /* network */,
 				5BFAD9571C919F4600DA365A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -346,6 +379,7 @@
 				5B8536951C9FD39F00FACDC0 /* alphacamp.app */,
 				5B8537CD1CA27FE900FACDC0 /* data.app */,
 				5BED56C71CA380F3003D73AD /* gesture.app */,
+				5BED56E11CA4D3A6003D73AD /* network.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -507,6 +541,23 @@
 			productReference = 5BED56C71CA380F3003D73AD /* gesture.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5BED56E01CA4D3A6003D73AD /* network */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BED56F21CA4D3A6003D73AD /* Build configuration list for PBXNativeTarget "network" */;
+			buildPhases = (
+				5BED56DD1CA4D3A6003D73AD /* Sources */,
+				5BED56DE1CA4D3A6003D73AD /* Frameworks */,
+				5BED56DF1CA4D3A6003D73AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = network;
+			productName = network;
+			productReference = 5BED56E11CA4D3A6003D73AD /* network.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5BFAD9551C919F4600DA365A /* poems */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BFAD9681C919F4600DA365A /* Build configuration list for PBXNativeTarget "poems" */;
@@ -631,6 +682,9 @@
 					5BED56C61CA380F3003D73AD = {
 						CreatedOnToolsVersion = 7.3;
 					};
+					5BED56E01CA4D3A6003D73AD = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					5BFAD9551C919F4600DA365A = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -674,6 +728,7 @@
 				5B8536941C9FD39F00FACDC0 /* alphacamp */,
 				5B8537CC1CA27FE900FACDC0 /* data */,
 				5BED56C61CA380F3003D73AD /* gesture */,
+				5BED56E01CA4D3A6003D73AD /* network */,
 			);
 		};
 /* End PBXProject section */
@@ -719,6 +774,16 @@
 				5BED56D41CA380F3003D73AD /* LaunchScreen.storyboard in Resources */,
 				5BED56D11CA380F3003D73AD /* Assets.xcassets in Resources */,
 				5BED56CF1CA380F3003D73AD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BED56DF1CA4D3A6003D73AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BED56EE1CA4D3A6003D73AD /* LaunchScreen.storyboard in Resources */,
+				5BED56EB1CA4D3A6003D73AD /* Assets.xcassets in Resources */,
+				5BED56E91CA4D3A6003D73AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,6 +892,15 @@
 				5BED56DA1CA388B5003D73AD /* RecView.swift in Sources */,
 				5BED56CC1CA380F3003D73AD /* GestureViewController.swift in Sources */,
 				5BED56CA1CA380F3003D73AD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BED56DD1CA4D3A6003D73AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BED56E61CA4D3A6003D73AD /* NetworkViewController.swift in Sources */,
+				5BED56E41CA4D3A6003D73AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,6 +1028,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				5BED56D31CA380F3003D73AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5BED56E71CA4D3A6003D73AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BED56E81CA4D3A6003D73AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BED56EC1CA4D3A6003D73AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BED56ED1CA4D3A6003D73AD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1145,6 +1235,32 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.gesture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5BED56F01CA4D3A6003D73AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = network/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.network;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BED56F11CA4D3A6003D73AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = network/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.frb.network;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1400,6 +1516,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5BED56F21CA4D3A6003D73AD /* Build configuration list for PBXNativeTarget "network" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BED56F01CA4D3A6003D73AD /* Debug */,
+				5BED56F11CA4D3A6003D73AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		5BFAD9511C919F4600DA365A /* Build configuration list for PBXProject "alphacamp-swift" */ = {
 			isa = XCConfigurationList;

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Network View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NetworkViewController" customModule="network" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1sv-72-aTr">
+                                <rect key="frame" x="20" y="40" width="280" height="508"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZf-9I-Trl">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="244"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cAC-PX-IgQ">
+                                        <rect key="frame" x="0.0" y="264" width="280" height="244"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cAC-PX-IgQ" secondAttribute="bottom" id="2Zd-cv-mex"/>
+                                    <constraint firstItem="cAC-PX-IgQ" firstAttribute="leading" secondItem="1sv-72-aTr" secondAttribute="leading" id="2lI-IH-w5F"/>
+                                    <constraint firstAttribute="trailing" secondItem="cAC-PX-IgQ" secondAttribute="trailing" id="2z1-GY-sN7"/>
+                                    <constraint firstItem="eZf-9I-Trl" firstAttribute="leading" secondItem="1sv-72-aTr" secondAttribute="leading" id="FoU-dC-wjd"/>
+                                    <constraint firstItem="eZf-9I-Trl" firstAttribute="height" secondItem="1sv-72-aTr" secondAttribute="height" multiplier="1:2" id="JBP-6n-t3w"/>
+                                    <constraint firstItem="cAC-PX-IgQ" firstAttribute="height" secondItem="1sv-72-aTr" secondAttribute="height" multiplier="1:2" id="Rsh-AL-Mf5"/>
+                                    <constraint firstItem="eZf-9I-Trl" firstAttribute="height" secondItem="cAC-PX-IgQ" secondAttribute="height" id="WzV-Y4-pWw"/>
+                                    <constraint firstItem="eZf-9I-Trl" firstAttribute="top" secondItem="1sv-72-aTr" secondAttribute="top" id="fj2-c5-3l0"/>
+                                    <constraint firstAttribute="trailing" secondItem="eZf-9I-Trl" secondAttribute="trailing" id="oR9-3t-1eX"/>
+                                    <constraint firstItem="cAC-PX-IgQ" firstAttribute="top" secondItem="eZf-9I-Trl" secondAttribute="bottom" constant="20" id="xBr-LP-pyG"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JBP-6n-t3w"/>
+                                        <exclude reference="Rsh-AL-Mf5"/>
+                                        <exclude reference="xBr-LP-pyG"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1sv-72-aTr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="A2K-eD-7Zd"/>
+                            <constraint firstAttribute="trailing" secondItem="1sv-72-aTr" secondAttribute="trailing" constant="20" id="G35-eJ-nKd"/>
+                            <constraint firstItem="1sv-72-aTr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="JIM-Jc-wa5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1sv-72-aTr" secondAttribute="bottom" constant="20" id="w9X-3W-0Y0"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="eZf-9I-Trl" id="K1L-ij-m8L"/>
+                        <outlet property="imageView2" destination="cAC-PX-IgQ" id="RE2-j5-zX0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
