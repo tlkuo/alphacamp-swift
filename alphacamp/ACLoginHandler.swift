@@ -56,20 +56,23 @@ class ACLoginHandler {
             (let data, let response, let error) -> Void in
 
             let httpResponse = response as? NSHTTPURLResponse
+            var jsonResponse = [String:AnyObject]()
+            
+            if let jsonData = data, jsonObj = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers),
+                jsonDic = jsonObj as? [String:AnyObject] {
+                jsonResponse = jsonDic
+            }
 
             guard httpResponse?.statusCode == 200 else {
 
-                if let jsonData = data, jsonObj = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers),
-                    jsonDic = jsonObj as? [String:AnyObject],
-                    message = jsonDic["message"] as? String {
-
-                    self.delegate?.loginFail(message)
+                if let message = jsonResponse["message"] as? String {
+                    self.delegate?.loginFail("message: \(message)")
                 }
                 else if let statusCode = httpResponse?.statusCode {
-                    self.delegate?.loginFail("invalid status: \(statusCode)")
+                    self.delegate?.loginFail("statusCode: \(statusCode)")
                 }
                 else {
-                    self.delegate?.loginFail("unknown status")
+                    self.delegate?.loginFail("statusCode: unknown")
                 }
 
                 return
@@ -77,11 +80,8 @@ class ACLoginHandler {
 
             // {"auth_token":"c569587503a78250e2e58126940357ba096a755e","message":"Ok","user_id":239}
 
-            guard let jsonData = data, jsonObj = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers),
-                jsonDic = jsonObj as? [String:AnyObject],
-                token = jsonDic["auth_token"] as? String
-            else {
-                self.delegate?.loginFail("invalid data")
+            guard let token = jsonResponse["auth_token"] as? String else {
+                self.delegate?.loginFail("auth_token: unknown")
                 return
             }
 

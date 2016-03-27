@@ -6,10 +6,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="qS9-51-NIC">
             <objects>
-                <viewController id="Xoz-oS-HFp" customClass="ACLoginViewController" customModule="alphacamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xoz-oS-HFp" customClass="ACMainViewController" customModule="alphacamp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ySe-qR-rJq"/>
                         <viewControllerLayoutGuide type="bottom" id="Nea-Z8-wWT"/>
@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="1014" y="271"/>
         </scene>
-        <!--Login Form View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="ma1-jV-jho">
             <objects>
-                <viewController id="2DD-E9-TlH" customClass="ACLoginFormViewController" customModule="alphacamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2DD-E9-TlH" customClass="ACLoginViewController" customModule="alphacamp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2hS-pP-5cr"/>
                         <viewControllerLayoutGuide type="bottom" id="Q5m-wh-5zt"/>

@@ -9,28 +9,44 @@
 import UIKit
 
 class ACLoginViewController: UIViewController {
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
-
+    
+    var loginHandler: ACLoginHandler?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loginBtn.layer.cornerRadius = 5
+        loginHandler = ACLoginHandler(delegate: self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    @IBAction func submitForm(sender: AnyObject) {
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let email = emailField.text, password = passwordField.text {
+            loginHandler?.login(email, password: password)
+        }
     }
-    */
 
 }
+
+extension ACLoginViewController: ACLoginDelegate {
+
+    func loginSuccess(token: String) {
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            NSUserDefaults.standardUserDefaults().setValue(token, forKey: "auth_token")
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewControllerWithIdentifier("ACTabBarController")
+            
+            self.presentViewController(controller, animated: true, completion: nil)
+        })
+    }
+
+    func loginFail(message: String) {
+        print("login fail: \(message)")
+    }
+}
+
