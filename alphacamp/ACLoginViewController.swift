@@ -37,11 +37,7 @@ extension ACLoginViewController: ACLoginDelegate {
         
         dispatch_async(dispatch_get_main_queue(), {
             NSUserDefaults.standardUserDefaults().setValue(token, forKey: "auth_token")
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewControllerWithIdentifier("ACTabBarController")
-            
-            self.presentViewController(controller, animated: true, completion: nil)
+            self.navigationController?.popViewControllerAnimated(true)
         })
     }
 

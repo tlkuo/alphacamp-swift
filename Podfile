@@ -7,3 +7,8 @@ target 'jokes' do
     pod 'Firebase'
 end
 
+target 'alphacamp' do
+    pod 'Alamofire'
+    pod 'Firebase'
+end
+
