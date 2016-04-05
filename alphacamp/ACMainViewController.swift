@@ -24,7 +24,7 @@ class ACMainViewController: UIViewController {
 
         if let token = NSUserDefaults.standardUserDefaults().stringForKey("auth_token") {
             print("token: \(token)")
-            userHandler?.validate(token)
+            userHandler?.validateUser(token)
         }
     }
 
@@ -42,17 +42,16 @@ class ACMainViewController: UIViewController {
 
 extension ACMainViewController: ACUserDelegate {
 
-    func ACUserStatus(valid: Bool) {
-        
-        if valid {
-            dispatch_async(dispatch_get_main_queue(), {
-                self.showMainPage()
-            })
-        } else {
-            dispatch_async(dispatch_get_main_queue(), {
-                print("ACUserStatus: invalid")
-                self.clearUserInfo()
-            })
-        }
+    func validateUserSuccess() {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.showMainPage()
+        })
+    }
+
+    func validateUserFail() {
+        dispatch_async(dispatch_get_main_queue(), {
+            print("ACUserStatus: invalid")
+            self.clearUserInfo()
+        })
     }
 }

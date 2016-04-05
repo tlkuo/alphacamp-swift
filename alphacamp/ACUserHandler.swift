@@ -10,7 +10,8 @@ import Foundation
 import Alamofire
 
 protocol ACUserDelegate: class {
-    func ACUserStatus(valid: Bool)
+    func validateUserSuccess()
+    func validateUserFail()
 }
 
 class ACUserHandler {
@@ -20,7 +21,7 @@ class ACUserHandler {
         self.delegate = delegate
     }
 
-    func validate(auth_token: String) {
+    func validateUser(auth_token: String) {
 
         guard let config = ACConfig.sharedConfig else {
             print("ACConfig: error")
@@ -30,7 +31,11 @@ class ACUserHandler {
         Alamofire
         .request(.GET, config.userUrl, parameters: ["api_key": config.apiKey, "auth_token": auth_token])
         .response { (request, response, data, error) in
-            self.delegate?.ACUserStatus(response?.statusCode == 200)
+            if response?.statusCode == 200 {
+                self.delegate?.validateUserSuccess()
+            } else {
+                self.delegate?.validateUserFail()
+            }
         }
     }
 }
