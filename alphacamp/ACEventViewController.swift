@@ -9,10 +9,20 @@
 import UIKit
 
 class ACEventViewController: UIViewController {
+    @IBOutlet weak var eventTable: UITableView!
+
+    var eventHandler: ACEventHandler?
+    var eventArray: [ACEvent] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        eventTable.rowHeight = UITableViewAutomaticDimension
+        eventTable.estimatedRowHeight = 50
+        
+        eventHandler = ACEventHandler(delegate: self)
+        eventHandler?.getEvents()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +30,58 @@ class ACEventViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
+        if segue.identifier == "ShowEventDetail" {
+
+            var view: UIView? = sender?.superview
+
+            while !(view is UITableViewCell) {
+                view = view?.superview
+            }
+
+            if let destController = segue.destinationViewController as? ACEventDetailViewController,
+                eventCell = view as? UITableViewCell,
+                indexPath = eventTable.indexPathForCell(eventCell) {
+
+                destController.url = NSURL(string: eventArray[indexPath.row].url)
+            }
+        }
+    }
+
+    @IBAction func showEventDetail(sender: AnyObject) {
+        performSegueWithIdentifier("ShowEventDetail", sender: sender)
+    }
 }
 
+extension ACEventViewController: ACEventDelegate {
+
+    func getEventsSuccess(events: [ACEvent]) {
+        eventArray = events
+        eventTable.reloadData()
+    }
+
+    func getEventsFail() {
+
+    }
+}
+
+extension ACEventViewController: UITableViewDataSource {
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return eventArray.count
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath)
+        let event = eventArray[indexPath.row]
+
+        if let eventCell = cell as? ACEventTableViewCell {
+            eventCell.eventTitle.text = event.title
+            eventCell.eventDate.text = event.date
+            eventCell.eventDescription.text = event.description
+        }
+
+        return cell
+    }
+}

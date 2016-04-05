@@ -295,7 +295,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="325" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5JH-58-zl6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="325" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5JH-58-zl6">
                                 <rect key="frame" x="10" y="74" width="300" height="435"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Qzx-aS-0Rp">
@@ -304,7 +304,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="325" id="9W8-Ri-kMx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="325" id="9W8-Ri-kMx" customClass="ACEventTableViewCell" customModule="alphacamp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="325"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9W8-Ri-kMx" id="TOC-h5-Bj2">
@@ -342,7 +342,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="4Yg-GU-QiY" kind="show" id="EH5-gD-ALn"/>
+                                                        <action selector="showEventDetail:" destination="do2-9l-iOH" eventType="touchUpInside" id="0VC-9B-rxB"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -373,8 +373,17 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventDate" destination="JGq-Y2-BuQ" id="HRx-Lw-z4Y"/>
+                                            <outlet property="eventDescription" destination="MZ9-Te-nOY" id="Gdl-Zl-mcL"/>
+                                            <outlet property="eventImage" destination="Z8o-4N-BZg" id="r72-7h-7VY"/>
+                                            <outlet property="eventTitle" destination="Rh0-Ot-CN2" id="b2D-UL-Bbx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="do2-9l-iOH" id="7mX-eU-QIb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -387,6 +396,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="dVj-sE-5mi"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="eventTable" destination="5JH-58-zl6" id="8JT-XD-3NY"/>
+                        <segue destination="4Yg-GU-QiY" kind="show" identifier="ShowEventDetail" id="NhQ-wN-b1B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axv-E5-4VS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import WebKit
 
 class ACEventDetailViewController: UIViewController {
 
+    var url: NSURL?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
+
+        view.addSubview(webView)
+
+        if let url = self.url {
+            webView.loadRequest(NSURLRequest(URL: url))
+        }
     }
 
     override func didReceiveMemoryWarning() {
