@@ -22,7 +22,7 @@
 		5B8536A81C9FE80200FACDC0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8536A71C9FE80200FACDC0 /* Login.storyboard */; };
 		5B8536AA1C9FE9CC00FACDC0 /* ACMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536A91C9FE9CC00FACDC0 /* ACMainViewController.swift */; };
 		5B8536AD1C9FEA3F00FACDC0 /* ACLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536AC1C9FEA3F00FACDC0 /* ACLoginViewController.swift */; };
-		5B8536AF1C9FF8B000FACDC0 /* ACLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536AE1C9FF8B000FACDC0 /* ACLoginHandler.swift */; };
+		5B8536AF1C9FF8B000FACDC0 /* ACLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536AE1C9FF8B000FACDC0 /* ACLoginManager.swift */; };
 		5B8536B11CA0EB5700FACDC0 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8536B01CA0EB5700FACDC0 /* FileViewController.swift */; };
 		5B8537D01CA27FE900FACDC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537CF1CA27FE900FACDC0 /* AppDelegate.swift */; };
 		5B8537D21CA27FE900FACDC0 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8537D11CA27FE900FACDC0 /* DataViewController.swift */; };
@@ -74,11 +74,11 @@
 		5BED58B31CAE5B2A003D73AD /* ACMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58B21CAE5B2A003D73AD /* ACMemberViewController.swift */; };
 		5BED58B71CAE7904003D73AD /* ACClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58B61CAE7904003D73AD /* ACClassTableViewController.swift */; };
 		5BED58B91CAE7B49003D73AD /* ACClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58B81CAE7B49003D73AD /* ACClassDetailViewController.swift */; };
-		5BED58BB1CB287C0003D73AD /* ACUserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58BA1CB287C0003D73AD /* ACUserHandler.swift */; };
+		5BED58BB1CB287C0003D73AD /* ACUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58BA1CB287C0003D73AD /* ACUserManager.swift */; };
 		5BED58BD1CB28821003D73AD /* ACConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58BC1CB28821003D73AD /* ACConfig.swift */; };
-		5BED58C11CB2BBD6003D73AD /* ACEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58C01CB2BBD6003D73AD /* ACEventHandler.swift */; };
+		5BED58C11CB2BBD6003D73AD /* ACEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58C01CB2BBD6003D73AD /* ACEventManager.swift */; };
 		5BED58C51CB2E34F003D73AD /* ACEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58C41CB2E34F003D73AD /* ACEventTableViewCell.swift */; };
-		5BED58C81CB397AE003D73AD /* ACClassHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58C71CB397AE003D73AD /* ACClassHandler.swift */; };
+		5BED58C81CB397AE003D73AD /* ACClassManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58C71CB397AE003D73AD /* ACClassManager.swift */; };
 		5BFAD95A1C919F4600DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD9591C919F4600DA365A /* AppDelegate.swift */; };
 		5BFAD95C1C919F4600DA365A /* PoetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */; };
 		5BFAD95F1C919F4600DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD95D1C919F4600DA365A /* Main.storyboard */; };
@@ -140,7 +140,7 @@
 		5B8536A71C9FE80200FACDC0 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5B8536A91C9FE9CC00FACDC0 /* ACMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACMainViewController.swift; sourceTree = "<group>"; };
 		5B8536AC1C9FEA3F00FACDC0 /* ACLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLoginViewController.swift; sourceTree = "<group>"; };
-		5B8536AE1C9FF8B000FACDC0 /* ACLoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLoginHandler.swift; sourceTree = "<group>"; };
+		5B8536AE1C9FF8B000FACDC0 /* ACLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLoginManager.swift; sourceTree = "<group>"; };
 		5B8536B01CA0EB5700FACDC0 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 		5B8537CD1CA27FE900FACDC0 /* data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = data.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8537CF1CA27FE900FACDC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -208,11 +208,11 @@
 		5BED58B21CAE5B2A003D73AD /* ACMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACMemberViewController.swift; sourceTree = "<group>"; };
 		5BED58B61CAE7904003D73AD /* ACClassTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACClassTableViewController.swift; sourceTree = "<group>"; };
 		5BED58B81CAE7B49003D73AD /* ACClassDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACClassDetailViewController.swift; sourceTree = "<group>"; };
-		5BED58BA1CB287C0003D73AD /* ACUserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACUserHandler.swift; sourceTree = "<group>"; };
+		5BED58BA1CB287C0003D73AD /* ACUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACUserManager.swift; sourceTree = "<group>"; };
 		5BED58BC1CB28821003D73AD /* ACConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACConfig.swift; sourceTree = "<group>"; };
-		5BED58C01CB2BBD6003D73AD /* ACEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACEventHandler.swift; sourceTree = "<group>"; };
+		5BED58C01CB2BBD6003D73AD /* ACEventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACEventManager.swift; sourceTree = "<group>"; };
 		5BED58C41CB2E34F003D73AD /* ACEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACEventTableViewCell.swift; sourceTree = "<group>"; };
-		5BED58C71CB397AE003D73AD /* ACClassHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACClassHandler.swift; sourceTree = "<group>"; };
+		5BED58C71CB397AE003D73AD /* ACClassManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACClassManager.swift; sourceTree = "<group>"; };
 		5BFAD9561C919F4600DA365A /* poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFAD9591C919F4600DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetListViewController.swift; sourceTree = "<group>"; };
@@ -433,8 +433,8 @@
 		5B8536AB1C9FE9E200FACDC0 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				5B8536AE1C9FF8B000FACDC0 /* ACLoginHandler.swift */,
-				5BED58BA1CB287C0003D73AD /* ACUserHandler.swift */,
+				5B8536AE1C9FF8B000FACDC0 /* ACLoginManager.swift */,
+				5BED58BA1CB287C0003D73AD /* ACUserManager.swift */,
 				5B8536A91C9FE9CC00FACDC0 /* ACMainViewController.swift */,
 				5B8536AC1C9FEA3F00FACDC0 /* ACLoginViewController.swift */,
 				5B8536A71C9FE80200FACDC0 /* Login.storyboard */,
@@ -562,7 +562,7 @@
 		5BED58BF1CB2BB99003D73AD /* event */ = {
 			isa = PBXGroup;
 			children = (
-				5BED58C01CB2BBD6003D73AD /* ACEventHandler.swift */,
+				5BED58C01CB2BBD6003D73AD /* ACEventManager.swift */,
 				5BED58C41CB2E34F003D73AD /* ACEventTableViewCell.swift */,
 				5B8536991C9FD39F00FACDC0 /* ACEventViewController.swift */,
 				5BED58B01CAE57DF003D73AD /* ACEventDetailViewController.swift */,
@@ -573,7 +573,7 @@
 		5BED58C61CB39738003D73AD /* class */ = {
 			isa = PBXGroup;
 			children = (
-				5BED58C71CB397AE003D73AD /* ACClassHandler.swift */,
+				5BED58C71CB397AE003D73AD /* ACClassManager.swift */,
 				5BED58B61CAE7904003D73AD /* ACClassTableViewController.swift */,
 				5BED58B81CAE7B49003D73AD /* ACClassDetailViewController.swift */,
 			);
@@ -1379,18 +1379,18 @@
 			files = (
 				5BED58B71CAE7904003D73AD /* ACClassTableViewController.swift in Sources */,
 				5BED58C51CB2E34F003D73AD /* ACEventTableViewCell.swift in Sources */,
-				5B8536AF1C9FF8B000FACDC0 /* ACLoginHandler.swift in Sources */,
+				5B8536AF1C9FF8B000FACDC0 /* ACLoginManager.swift in Sources */,
 				5B8536AA1C9FE9CC00FACDC0 /* ACMainViewController.swift in Sources */,
 				5BED58B91CAE7B49003D73AD /* ACClassDetailViewController.swift in Sources */,
 				5BED58B11CAE57DF003D73AD /* ACEventDetailViewController.swift in Sources */,
 				5BED58B31CAE5B2A003D73AD /* ACMemberViewController.swift in Sources */,
 				5B85369A1C9FD39F00FACDC0 /* ACEventViewController.swift in Sources */,
-				5BED58C11CB2BBD6003D73AD /* ACEventHandler.swift in Sources */,
+				5BED58C11CB2BBD6003D73AD /* ACEventManager.swift in Sources */,
 				5B8536AD1C9FEA3F00FACDC0 /* ACLoginViewController.swift in Sources */,
 				5B8536981C9FD39F00FACDC0 /* AppDelegate.swift in Sources */,
-				5BED58BB1CB287C0003D73AD /* ACUserHandler.swift in Sources */,
+				5BED58BB1CB287C0003D73AD /* ACUserManager.swift in Sources */,
 				5BED58BD1CB28821003D73AD /* ACConfig.swift in Sources */,
-				5BED58C81CB397AE003D73AD /* ACClassHandler.swift in Sources */,
+				5BED58C81CB397AE003D73AD /* ACClassManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

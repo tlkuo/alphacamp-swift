@@ -1,5 +1,5 @@
 //
-//  ACClassHandler.swift
+//  ACClassManager.swift
 //  alphacamp-swift
 //
 //  Created by martin on 2016/4/5.
@@ -17,7 +17,7 @@ struct ACLesson {
 struct ACCourse {
     let name: String
 
-    var lessons: [ACLesson]?
+    var lessons: [ACLesson]
 }
 
 struct ACClass {
@@ -34,7 +34,7 @@ protocol ACClassDelegate: class {
     func getCoursesFail()
 }
 
-class ACClassHandler {
+class ACClassManager {
 
     weak var delegate: ACClassDelegate?
 
@@ -103,7 +103,7 @@ class ACClassHandler {
                     if let acLessons = acCourse.valueForKey("lessons") as? NSArray {
 
                         for acLesson in acLessons {
-                            course.lessons?.append(ACLesson(
+                            course.lessons.append(ACLesson(
                                 name: acLesson.valueForKey("name") as? String ?? "",
                                 url: acLesson.valueForKey("url") as? String ?? ""
                             ))

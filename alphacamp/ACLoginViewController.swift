@@ -13,19 +13,19 @@ class ACLoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     
-    var loginHandler: ACLoginHandler?
+    var loginManager: ACLoginManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loginBtn.layer.cornerRadius = 5
-        loginHandler = ACLoginHandler(delegate: self)
+        loginManager = ACLoginManager(delegate: self)
     }
 
     @IBAction func submitForm(sender: AnyObject) {
 
         if let email = emailField.text, password = passwordField.text {
-            loginHandler?.login(email, password: password)
+            loginManager?.login(email, password: password)
         }
     }
 

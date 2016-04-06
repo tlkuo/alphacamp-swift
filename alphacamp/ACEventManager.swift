@@ -1,5 +1,5 @@
 //
-//  ACEventHandler.swift
+//  ACEventManager.swift
 //  alphacamp-swift
 //
 //  Created by martin on 2016/4/4.
@@ -22,7 +22,7 @@ protocol ACEventDelegate: class {
     func getEventsFail()
 }
 
-class ACEventHandler {
+class ACEventManager {
 
     weak var delegate: ACEventDelegate?
     

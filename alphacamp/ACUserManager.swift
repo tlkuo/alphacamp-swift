@@ -1,5 +1,5 @@
 //
-//  ACUserHandler.swift
+//  ACUserManager.swift
 //  alphacamp-swift
 //
 //  Created by martin on 2016/4/4.
@@ -14,7 +14,7 @@ protocol ACUserDelegate: class {
     func validateUserFail()
 }
 
-class ACUserHandler {
+class ACUserManager {
     weak var delegate: ACUserDelegate?
     
     init(delegate: ACUserDelegate) {

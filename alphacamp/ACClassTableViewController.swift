@@ -10,7 +10,7 @@ import UIKit
 
 class ACClassTableViewController: UITableViewController {
 
-    var classHandler: ACClassHandler?
+    var classManager: ACClassManager?
     var classArray: [ACClass] = []
     var classIndex = 0
     var authToken: String?
@@ -33,8 +33,8 @@ class ACClassTableViewController: UITableViewController {
             return
         }
 
-        classHandler = ACClassHandler(delegate: self)
-        classHandler?.getClasses(token)
+        classManager = ACClassManager(delegate: self)
+        classManager?.getClasses(token)
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +58,7 @@ class ACClassTableViewController: UITableViewController {
         let acClass = classArray[index]
 
         if acClass.courses == nil {
-            classHandler?.getCourses(token, id: acClass.id)
+            classManager?.getCourses(token, id: acClass.id)
         } else {
             tableView.reloadData()
         }
@@ -71,35 +71,21 @@ class ACClassTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return acCourse?.lessons?.count > 0 || classArray.count > 0 ? 1 : 0
+        return acCourse?.lessons.count > 0 || classArray.count > 0 ? 1 : 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        if acCourse != nil {
-            return acCourse?.lessons?.count ?? 0
-        }
-
-        if classArray.count > 0 {
-            return classArray[classIndex].courses?.count ?? 0
-        }
-
-        return 0
+        return acCourse?.lessons.count ?? classArray[classIndex].courses?.count ?? 0
     }
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-
-        return acCourse != nil ? (acCourse?.name) : classArray[classIndex].name
+        return acCourse?.name ?? classArray[classIndex].name
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CourseCell", forIndexPath: indexPath)
 
-        if acCourse != nil {
-            cell.textLabel?.text = acCourse?.lessons?[indexPath.row].name
-        } else {
-            cell.textLabel?.text = classArray[classIndex].courses?[indexPath.row].name
-        }
+        cell.textLabel?.text = acCourse?.lessons[indexPath.row].name ?? classArray[classIndex].courses?[indexPath.row].name
 
         return cell
     }
@@ -159,7 +145,7 @@ class ACClassTableViewController: UITableViewController {
 
             if let destController = segue.destinationViewController as? ACClassDetailViewController,
                 indexPath = tableView.indexPathForSelectedRow,
-                url = acCourse?.lessons?[indexPath.row].url {
+                url = acCourse?.lessons[indexPath.row].url {
 
                 destController.url = NSURL(string: url)
             }

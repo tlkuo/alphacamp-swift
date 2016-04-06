@@ -11,20 +11,20 @@ import UIKit
 class ACMainViewController: UIViewController {
     @IBOutlet weak var loginBtn: UIButton!
 
-    var userHandler: ACUserHandler?
+    var userManager: ACUserManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loginBtn.layer.cornerRadius = 5
-        userHandler = ACUserHandler(delegate: self)
+        userManager = ACUserManager(delegate: self)
     }
     
     override func viewDidAppear(animated: Bool) {
 
         if let token = NSUserDefaults.standardUserDefaults().stringForKey("auth_token") {
             print("token: \(token)")
-            userHandler?.validateUser(token)
+            userManager?.validateUser(token)
         }
     }
 

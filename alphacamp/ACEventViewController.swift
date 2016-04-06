@@ -11,7 +11,7 @@ import UIKit
 class ACEventViewController: UIViewController {
     @IBOutlet weak var eventTable: UITableView!
 
-    var eventHandler: ACEventHandler?
+    var eventManager: ACEventManager?
     var eventArray: [ACEvent] = []
 
     override func viewDidLoad() {
@@ -21,8 +21,8 @@ class ACEventViewController: UIViewController {
         eventTable.rowHeight = UITableViewAutomaticDimension
         eventTable.estimatedRowHeight = 50
         
-        eventHandler = ACEventHandler(delegate: self)
-        eventHandler?.getEvents()
+        eventManager = ACEventManager(delegate: self)
+        eventManager?.getEvents()
     }
 
     override func didReceiveMemoryWarning() {

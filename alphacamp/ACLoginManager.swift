@@ -1,5 +1,5 @@
 //
-//  ACLoginHandler.swift
+//  ACLoginManager.swift
 //  alphacamp-swift
 //
 //  Created by martin on 2016/3/21.
@@ -15,7 +15,7 @@ protocol ACLoginDelegate: class {
     func loginFail(message: String)
 }
 
-class ACLoginHandler {
+class ACLoginManager {
     
     weak var delegate: ACLoginDelegate?
     
