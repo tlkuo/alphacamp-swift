@@ -203,7 +203,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClassCell" id="Ban-x6-fkD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseCell" id="Ban-x6-fkD">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ban-x6-fkD" id="Lnr-FL-ZMb">
@@ -211,7 +211,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Qaj-i1-Pkc" kind="show" id="3VG-0x-Vul"/>
+                                    <segue destination="Qaj-i1-Pkc" kind="show" identifier="ShowLessons" id="3VG-0x-Vul"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -241,7 +241,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClassCell" id="jPc-DE-koh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseCell" id="jPc-DE-koh">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jPc-DE-koh" id="zng-vA-di0">
@@ -249,7 +249,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="X6G-NL-ove" kind="show" id="PTl-ix-7LG"/>
+                                    <segue destination="X6G-NL-ove" kind="show" identifier="ShowLessonDetail" id="PTl-ix-7LG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

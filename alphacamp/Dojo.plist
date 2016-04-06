@@ -6,6 +6,8 @@
 	<dict>
 		<key>Path</key>
 		<dict>
+			<key>Course</key>
+			<string>/api/v1/courses</string>
 			<key>User</key>
 			<string>/api/v1/me</string>
 			<key>Login</key>

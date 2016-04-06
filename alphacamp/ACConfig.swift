@@ -16,6 +16,7 @@ class ACConfig {
     let apiUrl: NSURL
     let loginUrl: NSURL
     let userUrl: NSURL
+    let courseUrl: NSURL
 
     init?() {
         guard let bundlePath = NSBundle.mainBundle().pathForResource("Dojo", ofType: "plist"),
@@ -30,7 +31,9 @@ class ACConfig {
             loginPathStr = apiPathDic["Login"] as? String,
             loginUrl    = NSURL(string: loginPathStr, relativeToURL: apiUrl),
             userPathStr = apiPathDic["User"] as? String,
-            userUrl    = NSURL(string: userPathStr, relativeToURL: apiUrl)
+            userUrl    = NSURL(string: userPathStr, relativeToURL: apiUrl),
+            coursePathStr = apiPathDic["Course"] as? String,
+            courseUrl    = NSURL(string: coursePathStr, relativeToURL: apiUrl)
         else {
             print("Dojo.plist: error")
             return nil
@@ -40,5 +43,6 @@ class ACConfig {
         self.apiUrl = apiUrl
         self.loginUrl = loginUrl
         self.userUrl = userUrl
+        self.courseUrl = courseUrl
     }
 }
