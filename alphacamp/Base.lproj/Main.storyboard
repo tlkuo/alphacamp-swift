@@ -93,71 +93,15 @@
                                     <segment title="師資與顧問團"/>
                                     <segment title="BootCamp校友"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlAction:" destination="auo-ki-rqo" eventType="valueChanged" id="NS0-fK-yni"/>
+                                </connections>
                             </segmentedControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VfL-C6-f2e">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VfL-C6-f2e">
                                 <rect key="frame" x="10" y="112" width="300" height="350"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdz-gf-QqE">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="303"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zgb-XX-Q2U">
-                                                <rect key="frame" x="75" y="10" width="150" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Zgb-XX-Q2U" secondAttribute="height" multiplier="1:1" id="siy-sF-xRf"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bernard Chan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzf-Ga-OEd">
-                                                <rect key="frame" x="87" y="170" width="125" height="23"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TMI 駐場創業家，曾任 Yahoo！亞太區廣告業務總監。出生香港、麻省理工學院 Sloan 商學院 MBA 畢業，芝加哥 Ruby on Rails 課程研習、在美國，北京，香港有多次 Startup 經驗" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xG6-Ek-YH7">
-                                                <rect key="frame" x="0.0" y="203" width="300" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="ajQ-sP-vyc"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="Zgb-XX-Q2U" firstAttribute="centerX" secondItem="Hdz-gf-QqE" secondAttribute="centerX" id="8LO-jx-Wmv"/>
-                                            <constraint firstItem="xG6-Ek-YH7" firstAttribute="centerX" secondItem="Hdz-gf-QqE" secondAttribute="centerX" id="BYq-ST-kS6"/>
-                                            <constraint firstItem="xG6-Ek-YH7" firstAttribute="leading" secondItem="Hdz-gf-QqE" secondAttribute="leading" constant="10" id="Dg0-di-C0C"/>
-                                            <constraint firstItem="Fzf-Ga-OEd" firstAttribute="centerX" secondItem="Hdz-gf-QqE" secondAttribute="centerX" id="FWY-Kw-4q2"/>
-                                            <constraint firstItem="Fzf-Ga-OEd" firstAttribute="top" secondItem="Zgb-XX-Q2U" secondAttribute="bottom" constant="10" id="UjS-c3-JcD"/>
-                                            <constraint firstItem="Zgb-XX-Q2U" firstAttribute="top" secondItem="Hdz-gf-QqE" secondAttribute="top" constant="10" id="elI-sh-DDa"/>
-                                            <constraint firstAttribute="trailing" secondItem="xG6-Ek-YH7" secondAttribute="trailing" constant="10" id="gTz-aY-6N8"/>
-                                            <constraint firstItem="xG6-Ek-YH7" firstAttribute="top" secondItem="Fzf-Ga-OEd" secondAttribute="bottom" constant="10" id="t2d-iE-veJ"/>
-                                            <constraint firstItem="Zgb-XX-Q2U" firstAttribute="width" secondItem="Hdz-gf-QqE" secondAttribute="width" multiplier="1:2" id="tqd-2L-Zpq"/>
-                                            <constraint firstAttribute="bottom" secondItem="xG6-Ek-YH7" secondAttribute="bottom" constant="10" id="zlK-0y-gmK"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Dg0-di-C0C"/>
-                                                <exclude reference="gTz-aY-6N8"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Hdz-gf-QqE" secondAttribute="trailing" id="2C3-kG-Pq5"/>
-                                    <constraint firstItem="Hdz-gf-QqE" firstAttribute="top" secondItem="VfL-C6-f2e" secondAttribute="top" id="7Xy-ne-Qk5"/>
-                                    <constraint firstItem="Hdz-gf-QqE" firstAttribute="width" secondItem="VfL-C6-f2e" secondAttribute="width" id="8LE-q2-Trd"/>
-                                    <constraint firstItem="Hdz-gf-QqE" firstAttribute="centerY" secondItem="VfL-C6-f2e" secondAttribute="centerY" id="fRw-VC-Xnr"/>
-                                    <constraint firstItem="Hdz-gf-QqE" firstAttribute="leading" secondItem="VfL-C6-f2e" secondAttribute="leading" id="igo-4t-25c"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hdz-gf-QqE" secondAttribute="bottom" id="yyg-fl-cA2"/>
-                                    <constraint firstItem="Hdz-gf-QqE" firstAttribute="centerX" secondItem="VfL-C6-f2e" secondAttribute="centerX" id="zQB-0n-Z4b"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8LE-q2-Trd"/>
-                                        <exclude reference="fRw-VC-Xnr"/>
-                                    </mask>
-                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="auo-ki-rqo" id="fHl-Dy-mx3"/>
+                                </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Dc-2K-fz5">
                                 <rect key="frame" x="140" y="472" width="39" height="37"/>
@@ -170,20 +114,19 @@
                             <constraint firstItem="5rm-xu-ply" firstAttribute="top" secondItem="3Dc-2K-fz5" secondAttribute="bottom" constant="10" id="506-YV-ckV"/>
                             <constraint firstItem="bvN-4z-mdk" firstAttribute="top" secondItem="5qX-IJ-rRl" secondAttribute="bottom" constant="10" id="9Ja-Vr-hob"/>
                             <constraint firstAttribute="trailing" secondItem="VfL-C6-f2e" secondAttribute="trailing" constant="10" id="BSF-ef-igh"/>
-                            <constraint firstItem="Hdz-gf-QqE" firstAttribute="width" secondItem="ICM-Nl-TwC" secondAttribute="width" priority="750" id="J3x-jy-Ncl"/>
                             <constraint firstItem="VfL-C6-f2e" firstAttribute="leading" secondItem="ICM-Nl-TwC" secondAttribute="leading" constant="10" id="S1l-8v-hEc"/>
                             <constraint firstItem="VfL-C6-f2e" firstAttribute="top" secondItem="bvN-4z-mdk" secondAttribute="bottom" constant="10" id="SR2-34-jHf"/>
                             <constraint firstItem="bvN-4z-mdk" firstAttribute="centerX" secondItem="ICM-Nl-TwC" secondAttribute="centerX" id="iK0-In-PyR"/>
                             <constraint firstItem="3Dc-2K-fz5" firstAttribute="centerX" secondItem="ICM-Nl-TwC" secondAttribute="centerX" id="urg-Py-G43"/>
                             <constraint firstItem="3Dc-2K-fz5" firstAttribute="top" secondItem="VfL-C6-f2e" secondAttribute="bottom" constant="10" id="xLX-li-X2O"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="J3x-jy-Ncl"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="memberScrollView" destination="VfL-C6-f2e" id="0pk-Yl-gj3"/>
+                        <outlet property="pageControl" destination="3Dc-2K-fz5" id="pYR-aw-QSw"/>
+                        <outlet property="segmentedControl" destination="bvN-4z-mdk" id="N6V-Uu-Dj2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qqi-WF-Ptg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

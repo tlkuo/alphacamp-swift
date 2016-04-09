@@ -79,6 +79,9 @@
 		5BED58C11CB2BBD6003D73AD /* ACEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58C01CB2BBD6003D73AD /* ACEventManager.swift */; };
 		5BED58C51CB2E34F003D73AD /* ACEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58C41CB2E34F003D73AD /* ACEventTableViewCell.swift */; };
 		5BED58C81CB397AE003D73AD /* ACClassManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED58C71CB397AE003D73AD /* ACClassManager.swift */; };
+		5BED58F11CB50A40003D73AD /* ACMemberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BED58F01CB50A40003D73AD /* ACMemberView.xib */; };
+		5BED593B1CB66543003D73AD /* ACMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED593A1CB66543003D73AD /* ACMemberView.swift */; };
+		5BED593E1CB78DEE003D73AD /* ACMemberManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED593D1CB78DEE003D73AD /* ACMemberManager.swift */; };
 		5BFAD95A1C919F4600DA365A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD9591C919F4600DA365A /* AppDelegate.swift */; };
 		5BFAD95C1C919F4600DA365A /* PoetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */; };
 		5BFAD95F1C919F4600DA365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFAD95D1C919F4600DA365A /* Main.storyboard */; };
@@ -213,6 +216,9 @@
 		5BED58C01CB2BBD6003D73AD /* ACEventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACEventManager.swift; sourceTree = "<group>"; };
 		5BED58C41CB2E34F003D73AD /* ACEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACEventTableViewCell.swift; sourceTree = "<group>"; };
 		5BED58C71CB397AE003D73AD /* ACClassManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACClassManager.swift; sourceTree = "<group>"; };
+		5BED58F01CB50A40003D73AD /* ACMemberView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACMemberView.xib; sourceTree = "<group>"; };
+		5BED593A1CB66543003D73AD /* ACMemberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACMemberView.swift; sourceTree = "<group>"; };
+		5BED593D1CB78DEE003D73AD /* ACMemberManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACMemberManager.swift; sourceTree = "<group>"; };
 		5BFAD9561C919F4600DA365A /* poems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFAD9591C919F4600DA365A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BFAD95B1C919F4600DA365A /* PoetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetListViewController.swift; sourceTree = "<group>"; };
@@ -415,12 +421,12 @@
 		5B8536961C9FD39F00FACDC0 /* alphacamp */ = {
 			isa = PBXGroup;
 			children = (
+				5BED58E91CB4C82D003D73AD /* member */,
 				5BED58C61CB39738003D73AD /* class */,
 				5BED58BF1CB2BB99003D73AD /* event */,
 				5BED58BE1CB28E0E003D73AD /* config */,
 				5B8536AB1C9FE9E200FACDC0 /* login */,
 				5B8536971C9FD39F00FACDC0 /* AppDelegate.swift */,
-				5BED58B21CAE5B2A003D73AD /* ACMemberViewController.swift */,
 				5B85369B1C9FD39F00FACDC0 /* Main.storyboard */,
 				5B85369E1C9FD39F00FACDC0 /* Assets.xcassets */,
 				5B8536A01C9FD39F00FACDC0 /* LaunchScreen.storyboard */,
@@ -578,6 +584,17 @@
 				5BED58B81CAE7B49003D73AD /* ACClassDetailViewController.swift */,
 			);
 			name = class;
+			sourceTree = "<group>";
+		};
+		5BED58E91CB4C82D003D73AD /* member */ = {
+			isa = PBXGroup;
+			children = (
+				5BED593D1CB78DEE003D73AD /* ACMemberManager.swift */,
+				5BED58B21CAE5B2A003D73AD /* ACMemberViewController.swift */,
+				5BED58F01CB50A40003D73AD /* ACMemberView.xib */,
+				5BED593A1CB66543003D73AD /* ACMemberView.swift */,
+			);
+			name = member;
 			sourceTree = "<group>";
 		};
 		5BFAD94D1C919F4600DA365A = {
@@ -1123,6 +1140,7 @@
 				5B8536A21C9FD39F00FACDC0 /* LaunchScreen.storyboard in Resources */,
 				5B85369F1C9FD39F00FACDC0 /* Assets.xcassets in Resources */,
 				5BED56DC1CA3D678003D73AD /* Dojo.plist in Resources */,
+				5BED58F11CB50A40003D73AD /* ACMemberView.xib in Resources */,
 				5B85369D1C9FD39F00FACDC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1384,7 +1402,9 @@
 				5BED58B91CAE7B49003D73AD /* ACClassDetailViewController.swift in Sources */,
 				5BED58B11CAE57DF003D73AD /* ACEventDetailViewController.swift in Sources */,
 				5BED58B31CAE5B2A003D73AD /* ACMemberViewController.swift in Sources */,
+				5BED593E1CB78DEE003D73AD /* ACMemberManager.swift in Sources */,
 				5B85369A1C9FD39F00FACDC0 /* ACEventViewController.swift in Sources */,
+				5BED593B1CB66543003D73AD /* ACMemberView.swift in Sources */,
 				5BED58C11CB2BBD6003D73AD /* ACEventManager.swift in Sources */,
 				5B8536AD1C9FEA3F00FACDC0 /* ACLoginViewController.swift in Sources */,
 				5B8536981C9FD39F00FACDC0 /* AppDelegate.swift in Sources */,
