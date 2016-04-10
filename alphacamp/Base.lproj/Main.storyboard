@@ -87,14 +87,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bvN-4z-mdk">
-                                <rect key="frame" x="3" y="74" width="314" height="31"/>
+                                <rect key="frame" x="67.5" y="74" width="185" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3Rg-fs-48N"/>
                                 </constraints>
                                 <segments>
                                     <segment title="團隊核心人物"/>
                                     <segment title="師資與顧問團"/>
-                                    <segment title="BootCamp校友"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentedControlAction:" destination="auo-ki-rqo" eventType="valueChanged" id="NS0-fK-yni"/>
