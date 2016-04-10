@@ -10,5 +10,6 @@ end
 target 'alphacamp' do
     pod 'Alamofire'
     pod 'Firebase'
+    pod 'SDWebImage'
 end
 

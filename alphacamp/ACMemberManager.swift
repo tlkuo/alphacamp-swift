@@ -18,7 +18,7 @@ enum ACGroup: Int {
 struct ACMember {
     let firstName: String
     let lastName: String
-    let image: String
+    let avatar: String
     let introduction: String
     
     func getFullName() -> String {
@@ -86,7 +86,7 @@ class ACMemberManager {
                 let member = ACMember(
                     firstName: memberDic["firstName"] ?? "",
                     lastName: memberDic["lastName"] ?? "",
-                    image: "",
+                    avatar: memberDic["avatar"] ?? "",
                     introduction: memberDic["introduction"] ?? ""
                 )
 

@@ -87,7 +87,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bvN-4z-mdk">
-                                <rect key="frame" x="3" y="74" width="314" height="29"/>
+                                <rect key="frame" x="3" y="74" width="314" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Rg-fs-48N"/>
+                                </constraints>
                                 <segments>
                                     <segment title="團隊核心人物"/>
                                     <segment title="師資與顧問團"/>
@@ -97,14 +100,17 @@
                                     <action selector="segmentedControlAction:" destination="auo-ki-rqo" eventType="valueChanged" id="NS0-fK-yni"/>
                                 </connections>
                             </segmentedControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VfL-C6-f2e">
-                                <rect key="frame" x="10" y="112" width="300" height="350"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfL-C6-f2e">
+                                <rect key="frame" x="10" y="114" width="300" height="355"/>
                                 <connections>
                                     <outlet property="delegate" destination="auo-ki-rqo" id="fHl-Dy-mx3"/>
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Dc-2K-fz5">
-                                <rect key="frame" x="140" y="472" width="39" height="37"/>
+                                <rect key="frame" x="140" y="479" width="39" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KqL-0Q-Xcg"/>
+                                </constraints>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </pageControl>
@@ -254,7 +260,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="324.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z8o-4N-BZg">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z8o-4N-BZg">
                                                     <rect key="frame" x="10" y="10" width="280" height="140"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Z8o-4N-BZg" secondAttribute="height" multiplier="2:1" id="4uJ-oB-RK7"/>
@@ -391,7 +397,7 @@
         <scene sceneID="zyr-yK-eBs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zHf-7Z-711" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Event" id="lBn-7X-BGl"/>
+                    <tabBarItem key="tabBarItem" title="Event" image="eventIcon" id="lBn-7X-BGl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c7h-Zx-OcN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -410,7 +416,7 @@
         <scene sceneID="OCb-iB-rmg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JpS-bT-T3A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="AboutAC" id="eph-Qv-3kj"/>
+                    <tabBarItem key="tabBarItem" title="AboutAC" image="acIcon" id="BPa-Yq-i7d"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="azU-FW-cXN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -429,7 +435,7 @@
         <scene sceneID="jeL-iT-ncd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QQ2-MG-boq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Class" id="3de-sW-O6X"/>
+                    <tabBarItem key="tabBarItem" title="Class" image="classIcon" id="3de-sW-O6X"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AM4-2f-ONd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -445,4 +451,9 @@
             <point key="canvasLocation" x="279" y="250"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="acIcon" width="30" height="30"/>
+        <image name="classIcon" width="30" height="30"/>
+        <image name="eventIcon" width="30" height="30"/>
+    </resources>
 </document>

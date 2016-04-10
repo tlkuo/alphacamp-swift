@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ACMemberViewController: UIViewController {
 
@@ -131,8 +132,14 @@ extension ACMemberViewController: UIScrollViewDelegate {
             let height = memberScrollView.frame.height
 
             memberView.frame = CGRect(x: width * CGFloat(page), y: 0, width: width, height: height)
+            memberView.imageView.image = nil
             memberView.nameLabel.text = member.getFullName()
             memberView.introductionLabel.text = member.introduction
+            
+            if let url = NSURL(string: member.avatar) {
+                memberView.imageView.sd_setImageWithURL(url)
+            }
+            
             memberScrollView.addSubview(memberView)
         }
     }

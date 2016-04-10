@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ACEventViewController: UIViewController {
     @IBOutlet weak var eventTable: UITableView!
@@ -77,9 +78,15 @@ extension ACEventViewController: UITableViewDataSource {
         let event = eventArray[indexPath.row]
 
         if let eventCell = cell as? ACEventTableViewCell {
+
+            eventCell.eventImage.image = nil
             eventCell.eventTitle.text = event.title
             eventCell.eventDate.text = event.date
             eventCell.eventDescription.text = event.description
+            
+            if let url = NSURL(string: event.image) {
+                eventCell.eventImage.sd_setImageWithURL(url)
+            }
         }
 
         return cell
