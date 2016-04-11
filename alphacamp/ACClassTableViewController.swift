@@ -25,7 +25,9 @@ class ACClassTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         authToken = NSUserDefaults.standardUserDefaults().stringForKey("auth_token")
 
         guard let token = authToken else {
@@ -33,8 +35,11 @@ class ACClassTableViewController: UITableViewController {
             return
         }
 
-        classManager = ACClassManager(delegate: self)
-        classManager?.getClasses(token)
+        guard classManager != nil else {
+            classManager = ACClassManager(delegate: self)
+            classManager?.getClasses(token)
+            return
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,7 +70,12 @@ class ACClassTableViewController: UITableViewController {
     }
 
     func showLoginPage() {
-        // TODO: show login page
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+
+        if let controller = storyBoard.instantiateViewControllerWithIdentifier("ACLoginMainController") as? ACMainViewController {
+            controller.originControllers = navigationController?.viewControllers
+            self.navigationController?.setViewControllers([controller], animated: true)
+        }
     }
 
     // MARK: - Table view data source
@@ -165,6 +175,10 @@ extension ACClassTableViewController: ACClassDelegate {
 
     func getClassesFail() {
 
+        dispatch_async(dispatch_get_main_queue()) {
+            self.classManager = nil
+            self.showLoginPage()
+        }
     }
 
     func getCoursesSuccess(id: String, courses: [ACCourse]) {

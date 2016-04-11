@@ -9,7 +9,7 @@
         <!--Main View Controller-->
         <scene sceneID="qS9-51-NIC">
             <objects>
-                <viewController id="Xoz-oS-HFp" customClass="ACMainViewController" customModule="alphacamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ACLoginMainController" id="Xoz-oS-HFp" customClass="ACMainViewController" customModule="alphacamp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ySe-qR-rJq"/>
                         <viewControllerLayoutGuide type="bottom" id="Nea-Z8-wWT"/>

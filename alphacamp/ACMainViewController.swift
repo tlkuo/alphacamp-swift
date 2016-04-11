@@ -12,29 +12,22 @@ class ACMainViewController: UIViewController {
     @IBOutlet weak var loginBtn: UIButton!
 
     var userManager: ACUserManager?
-    
+    var originControllers: [UIViewController]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loginBtn.layer.cornerRadius = 5
         userManager = ACUserManager(delegate: self)
     }
-    
-    override func viewDidAppear(animated: Bool) {
 
-        if let token = NSUserDefaults.standardUserDefaults().stringForKey("auth_token") {
-            print("token: \(token)")
-            userManager?.validateUser(token)
+    func showPreviousController() {
+
+        if let controllers = originControllers {
+            navigationController?.setViewControllers(controllers, animated: true)
         }
     }
 
-    func showMainPage() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewControllerWithIdentifier("ACTabBarController")
-            
-        self.presentViewController(controller, animated: true, completion: nil)
-    }
-    
     func clearUserInfo() {
         NSUserDefaults.standardUserDefaults().removeObjectForKey("auth_token")
     }
@@ -44,7 +37,7 @@ extension ACMainViewController: ACUserDelegate {
 
     func validateUserSuccess() {
         dispatch_async(dispatch_get_main_queue(), {
-            self.showMainPage()
+            self.showPreviousController()
         })
     }
 

@@ -37,7 +37,10 @@ extension ACLoginViewController: ACLoginDelegate {
         
         dispatch_async(dispatch_get_main_queue(), {
             NSUserDefaults.standardUserDefaults().setValue(token, forKey: "auth_token")
-            self.navigationController?.popViewControllerAnimated(true)
+
+            if let controller =  self.navigationController?.viewControllers[0] as? ACMainViewController {
+                controller.showPreviousController()
+            }
         })
     }
 
