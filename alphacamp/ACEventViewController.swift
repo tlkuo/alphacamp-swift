@@ -11,6 +11,7 @@ import SDWebImage
 
 class ACEventViewController: UIViewController {
     @IBOutlet weak var eventTable: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var eventManager: ACEventManager?
     var eventArray: [ACEvent] = []
@@ -22,6 +23,7 @@ class ACEventViewController: UIViewController {
         eventTable.rowHeight = UITableViewAutomaticDimension
         eventTable.estimatedRowHeight = 50
         
+        activityIndicator.startAnimating()
         eventManager = ACEventManager(delegate: self)
         eventManager?.getEvents()
     }
@@ -60,10 +62,11 @@ extension ACEventViewController: ACEventDelegate {
     func getEventsSuccess(events: [ACEvent]) {
         eventArray = events
         eventTable.reloadData()
+        activityIndicator.stopAnimating()
     }
 
     func getEventsFail() {
-
+        activityIndicator.stopAnimating()
     }
 }
 

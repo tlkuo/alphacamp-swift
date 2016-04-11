@@ -36,6 +36,7 @@ class ACClassTableViewController: UITableViewController {
         }
 
         guard classManager != nil else {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
             classManager = ACClassManager(delegate: self)
             classManager?.getClasses(token)
             return
@@ -63,6 +64,7 @@ class ACClassTableViewController: UITableViewController {
         let acClass = classArray[index]
 
         if acClass.courses == nil {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
             classManager?.getCourses(token, id: acClass.id)
         } else {
             tableView.reloadData()
@@ -183,6 +185,11 @@ class ACClassTableViewController: UITableViewController {
         
         presentViewController(controller, animated: true, completion: nil)
     }
+
+    @IBAction func refresh(sender: AnyObject) {
+        // TODO
+        self.refreshControl?.endRefreshing()
+    }
 }
 
 extension ACClassTableViewController: ACClassDelegate {
@@ -190,7 +197,8 @@ extension ACClassTableViewController: ACClassDelegate {
     func getClassesSuccess(classes: [ACClass]) {
         classArray = classes
 
-        dispatch_async(dispatch_get_main_queue()) { 
+        dispatch_async(dispatch_get_main_queue()) {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             self.selectClass(0)
         }
     }
@@ -198,6 +206,7 @@ extension ACClassTableViewController: ACClassDelegate {
     func getClassesFail() {
 
         dispatch_async(dispatch_get_main_queue()) {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             self.classManager = nil
             self.showLoginPage()
         }
@@ -210,6 +219,7 @@ extension ACClassTableViewController: ACClassDelegate {
             classArray[index].courses = courses
 
             dispatch_async(dispatch_get_main_queue()) {
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                 self.tableView.reloadData()
             }
         }
@@ -217,5 +227,8 @@ extension ACClassTableViewController: ACClassDelegate {
 
     func getCoursesFail() {
 
+        dispatch_async(dispatch_get_main_queue()) {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        }
     }
 }

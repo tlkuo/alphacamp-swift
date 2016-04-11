@@ -113,6 +113,9 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </pageControl>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="HWu-Pq-I8q">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -122,12 +125,15 @@
                             <constraint firstItem="VfL-C6-f2e" firstAttribute="leading" secondItem="ICM-Nl-TwC" secondAttribute="leading" constant="10" id="S1l-8v-hEc"/>
                             <constraint firstItem="VfL-C6-f2e" firstAttribute="top" secondItem="bvN-4z-mdk" secondAttribute="bottom" constant="10" id="SR2-34-jHf"/>
                             <constraint firstItem="bvN-4z-mdk" firstAttribute="centerX" secondItem="ICM-Nl-TwC" secondAttribute="centerX" id="iK0-In-PyR"/>
+                            <constraint firstItem="HWu-Pq-I8q" firstAttribute="centerY" secondItem="ICM-Nl-TwC" secondAttribute="centerY" id="lOT-zt-1lX"/>
+                            <constraint firstItem="HWu-Pq-I8q" firstAttribute="centerX" secondItem="ICM-Nl-TwC" secondAttribute="centerX" id="s9M-Ty-MR7"/>
                             <constraint firstItem="3Dc-2K-fz5" firstAttribute="centerX" secondItem="ICM-Nl-TwC" secondAttribute="centerX" id="urg-Py-G43"/>
                             <constraint firstItem="3Dc-2K-fz5" firstAttribute="top" secondItem="VfL-C6-f2e" secondAttribute="bottom" constant="10" id="xLX-li-X2O"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="HWu-Pq-I8q" id="Fbm-Qh-xDF"/>
                         <outlet property="memberScrollView" destination="VfL-C6-f2e" id="0pk-Yl-gj3"/>
                         <outlet property="pageControl" destination="3Dc-2K-fz5" id="pYR-aw-QSw"/>
                         <outlet property="segmentedControl" destination="bvN-4z-mdk" id="N6V-Uu-Dj2"/>
@@ -176,6 +182,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Lcg-qt-f1W">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle"/>
+                        <connections>
+                            <action selector="refresh:" destination="An6-aK-sAj" eventType="valueChanged" id="Djj-f1-uLS"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gG9-ZU-pUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -213,6 +226,12 @@
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="oF6-8S-f7x">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="Qaj-i1-Pkc" eventType="valueChanged" id="9I1-2y-1hZ"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTV-Wq-j6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,7 +248,16 @@
                     <view key="view" contentMode="scaleToFill" id="Ljo-Er-tn4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="KST-jI-gY4">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KST-jI-gY4" firstAttribute="centerX" secondItem="Ljo-Er-tn4" secondAttribute="centerX" id="CZi-cH-aCP"/>
+                            <constraint firstItem="KST-jI-gY4" firstAttribute="centerY" secondItem="Ljo-Er-tn4" secondAttribute="centerY" id="Lab-PM-g87"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -339,11 +367,16 @@
                                     <outlet property="dataSource" destination="do2-9l-iOH" id="7mX-eU-QIb"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="INz-mx-cFw">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="INz-mx-cFw" firstAttribute="centerX" secondItem="dGG-tK-F7q" secondAttribute="centerX" id="0ej-Na-sOh"/>
                             <constraint firstItem="5JH-58-zl6" firstAttribute="top" secondItem="agW-Y7-996" secondAttribute="bottom" constant="10" id="9sw-Ig-1AL"/>
                             <constraint firstItem="5JH-58-zl6" firstAttribute="leading" secondItem="dGG-tK-F7q" secondAttribute="leading" constant="10" id="AGH-p3-224"/>
+                            <constraint firstItem="INz-mx-cFw" firstAttribute="centerY" secondItem="dGG-tK-F7q" secondAttribute="centerY" id="KRb-76-chl"/>
                             <constraint firstAttribute="trailing" secondItem="5JH-58-zl6" secondAttribute="trailing" constant="10" id="O5V-qP-fQm"/>
                             <constraint firstItem="fGV-CG-Eeq" firstAttribute="top" secondItem="5JH-58-zl6" secondAttribute="bottom" constant="10" id="bDq-Bx-Uzz"/>
                         </constraints>
@@ -351,6 +384,7 @@
                     <navigationItem key="navigationItem" id="dVj-sE-5mi"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="INz-mx-cFw" id="v85-Xn-pdq"/>
                         <outlet property="eventTable" destination="5JH-58-zl6" id="8JT-XD-3NY"/>
                         <segue destination="4Yg-GU-QiY" kind="show" identifier="ShowEventDetail" id="NhQ-wN-b1B"/>
                     </connections>
@@ -370,9 +404,21 @@
                     <view key="view" contentMode="scaleToFill" id="EIB-rU-qLl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-1W-JjE">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qWe-1W-JjE" firstAttribute="centerX" secondItem="EIB-rU-qLl" secondAttribute="centerX" id="7MB-nB-ZL2"/>
+                            <constraint firstItem="qWe-1W-JjE" firstAttribute="centerY" secondItem="EIB-rU-qLl" secondAttribute="centerY" id="jW1-2S-sGE"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="qWe-1W-JjE" id="dQ4-Sc-dCh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4S-V4-btD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

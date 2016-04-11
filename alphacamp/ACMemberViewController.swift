@@ -14,6 +14,7 @@ class ACMemberViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var memberScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var memberManager: ACMemberManager?
     var groups: [ACGroup: [String]] = [:]
@@ -26,6 +27,7 @@ class ACMemberViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        activityIndicator.startAnimating()
         memberManager = ACMemberManager(delegate: self)
         memberManager?.getMembers(.ACStaffGroup)
     }
@@ -63,6 +65,7 @@ class ACMemberViewController: UIViewController {
         currentGroup = group
 
         if groups[group] == nil {
+            activityIndicator.startAnimating()
             memberManager?.getMembers(group)
         } else {
             reloadScrollView()
@@ -179,11 +182,16 @@ extension ACMemberViewController: ACMemberDelegate {
             if self.currentGroup == group {
                 self.reloadScrollView()
             }
+            
+            self.activityIndicator.stopAnimating()
         }
     }
 
     func getMembersFail(group: ACGroup) {
 
+        dispatch_async(dispatch_get_main_queue()) {
+            self.activityIndicator.stopAnimating()
+        }
     }
     
     func getMemberSuccess(id: String, member: ACMember) {

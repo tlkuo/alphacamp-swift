@@ -9,7 +9,9 @@
 import UIKit
 import WebKit
 
-class ACEventDetailViewController: UIViewController {
+class ACEventDetailViewController: UIViewController, WKNavigationDelegate {
+
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var url: NSURL?
     
@@ -19,9 +21,12 @@ class ACEventDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
 
-        view.addSubview(webView)
+        webView.navigationDelegate = self
+        
+        view.insertSubview(webView, atIndex: 0)
 
         if let url = self.url {
+            activityIndicator.startAnimating()
             webView.loadRequest(NSURLRequest(URL: url))
         }
     }
@@ -31,6 +36,9 @@ class ACEventDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+        activityIndicator.stopAnimating()
+    }
 
     /*
     // MARK: - Navigation
