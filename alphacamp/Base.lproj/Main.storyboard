@@ -168,7 +168,13 @@
                             <outlet property="delegate" destination="An6-aK-sAj" id="gys-qb-uTe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="aji-FF-Bgc"/>
+                    <navigationItem key="navigationItem" id="aji-FF-Bgc">
+                        <barButtonItem key="rightBarButtonItem" image="Menu-50" id="Pm7-X5-0sv">
+                            <connections>
+                                <action selector="showMenu:" destination="An6-aK-sAj" id="tzc-AP-ten"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gG9-ZU-pUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -451,6 +457,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Menu-50" width="25" height="25"/>
         <image name="acIcon" width="30" height="30"/>
         <image name="classIcon" width="30" height="30"/>
         <image name="eventIcon" width="30" height="30"/>

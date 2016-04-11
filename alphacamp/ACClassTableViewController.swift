@@ -161,6 +161,28 @@ class ACClassTableViewController: UITableViewController {
             }
         }
     }
+
+    @IBAction func showMenu(sender: AnyObject) {
+        let controller = UIAlertController(title: "選擇課程", message: "", preferredStyle: .ActionSheet)
+        
+        for i in 0..<classArray.count {
+
+            let action = UIAlertAction(title: classArray[i].name, style: .Default, handler: { action in
+                self.selectClass(i)
+            })
+
+            controller.addAction(action)
+        }
+        
+        let action = UIAlertAction(title: "登出", style: .Cancel, handler: { action in
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("auth_token")
+            self.showLoginPage()
+        })
+
+        controller.addAction(action)
+        
+        presentViewController(controller, animated: true, completion: nil)
+    }
 }
 
 extension ACClassTableViewController: ACClassDelegate {
