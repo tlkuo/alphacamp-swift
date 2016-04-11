@@ -174,7 +174,7 @@ class ACClassTableViewController: UITableViewController {
             controller.addAction(action)
         }
         
-        let action = UIAlertAction(title: "登出", style: .Cancel, handler: { action in
+        let action = UIAlertAction(title: "登出", style: .Default, handler: { action in
             NSUserDefaults.standardUserDefaults().removeObjectForKey("auth_token")
             self.showLoginPage()
         })
