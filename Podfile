@@ -11,5 +11,6 @@ target 'alphacamp' do
     pod 'Alamofire'
     pod 'Firebase'
     pod 'SDWebImage'
+    pod 'SwiftyJSON'
 end
 

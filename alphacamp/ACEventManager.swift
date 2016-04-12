@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import SwiftyJSON
 
 struct ACEvent {
     let title: String
@@ -15,6 +16,14 @@ struct ACEvent {
     let description: String
     let image: String
     let url: String
+    
+    init(json: JSON) {
+        self.title = json["title"].stringValue
+        self.date = json["date"].stringValue
+        self.description = json["description"].stringValue
+        self.image = json["image"].stringValue
+        self.url = json["url"].stringValue
+    }
 }
 
 protocol ACEventDelegate: class {
@@ -32,7 +41,8 @@ class ACEventManager {
 
     // Event list will response through ACEventDelegate
     func getEvents() {
-        let rootRef = Firebase(url: "https://alphacamp-frb.firebaseio.com")
+
+        let rootRef = Firebase(url: ACConfig.fireBaseUrlString)
         let eventRef = rootRef.childByAppendingPath("events")
 
         eventRef.observeSingleEventOfType(.Value,
@@ -44,18 +54,9 @@ class ACEventManager {
                 }
 
                 var events: [ACEvent] = []
-
-                if let eventArray = snapshot.value as? NSArray {
-
-                    for event in eventArray {
-
-                        events.append(ACEvent(
-                            title: (event.objectForKey("title") as? String) ?? "",
-                            date: (event.objectForKey("date") as? String) ?? "",
-                            description: (event.objectForKey("description") as? String) ?? "",
-                            image: (event.objectForKey("image") as? String) ?? "",
-                            url: (event.objectForKey("url") as? String) ?? ""))
-                    }
+                
+                for event in JSON(snapshot.value!).arrayValue {
+                    events.append(ACEvent(json: event))
                 }
 
                 self.delegate?.getEventsSuccess(events)

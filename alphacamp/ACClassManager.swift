@@ -8,16 +8,31 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 struct ACLesson {
     let name: String
     let url: String
+    
+    init(json: JSON) {
+        self.name = json["name"].stringValue
+        self.url = json["url"].stringValue
+    }
 }
 
 struct ACCourse {
     let name: String
 
     var lessons: [ACLesson]
+    
+    init(json: JSON) {
+        self.name = json["section"]["name"].stringValue
+        self.lessons = []
+        
+        for lesson in json["lessons"].arrayValue {
+            lessons.append(ACLesson(json: lesson))
+        }
+    }
 }
 
 struct ACClass {
@@ -25,6 +40,12 @@ struct ACClass {
     let name: String
 
     var courses: [ACCourse]?
+    
+    init(json: JSON) {
+        self.id = json["id"].stringValue
+        self.name = json["name"].stringValue
+        self.courses = nil
+    }
 }
 
 protocol ACClassDelegate: class {
@@ -53,18 +74,12 @@ class ACClassManager {
         .request(.GET, config.courseUrl, parameters: ["api_key": config.apiKey, "auth_token": token])
         .responseJSON { response in
 
-            let jsonResponse = response.result.value
-
-            if let acClasses = jsonResponse?["courses"] as? NSArray {
-
+            if let value = response.result.value {
+                
                 var classes: [ACClass] = []
 
-                for acClass in acClasses {
-                    classes.append(ACClass(
-                        id: acClass.valueForKey("id") as? String ?? "",
-                        name: acClass.valueForKey("name") as? String ?? "",
-                        courses: nil
-                    ))
+                for json in JSON(value)["courses"].arrayValue {
+                    classes.append(ACClass(json: json))
                 }
 
                 self.delegate?.getClassesSuccess(classes)
@@ -86,31 +101,13 @@ class ACClassManager {
         Alamofire
         .request(.GET, config.courseUrl.URLByAppendingPathComponent(id), parameters: ["api_key": config.apiKey, "auth_token": token])
         .responseJSON { response in
-
-            let jsonResponse = response.result.value
-
-            if let acCourses = jsonResponse?["syllabus"] as? NSArray {
+            
+            if let value = response.result.value {
 
                 var courses: [ACCourse] = []
-
-                for acCourse in acCourses {
-
-                    var course = ACCourse(
-                        name: acCourse.valueForKey("section")?.valueForKey("name") as? String ?? "",
-                        lessons: []
-                    )
-
-                    if let acLessons = acCourse.valueForKey("lessons") as? NSArray {
-
-                        for acLesson in acLessons {
-                            course.lessons.append(ACLesson(
-                                name: acLesson.valueForKey("name") as? String ?? "",
-                                url: acLesson.valueForKey("url") as? String ?? ""
-                            ))
-                        }
-                    }
-
-                    courses.append(course)
+                
+                for course in JSON(value)["syllabus"].arrayValue {
+                    courses.append(ACCourse(json: course))
                 }
 
                 self.delegate?.getCoursesSuccess(id, courses: courses)

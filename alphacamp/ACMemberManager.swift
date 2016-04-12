@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import SwiftyJSON
 
 enum ACGroup: Int {
     case ACStaffGroup = 0
@@ -15,22 +16,43 @@ enum ACGroup: Int {
     case ACAlumniGroup
 }
 
-struct ACMember {
-    let firstName: String
-    let lastName: String
-    let avatar: String
-    let introduction: String
+class ACMember {
+    let id: String
+    var initedInfo: Bool
+
+    var firstName: String
+    var lastName: String
+    var avatar: String
+    var introduction: String
     
+    init(id: String) {
+        self.id = id
+        self.initedInfo = false
+        self.firstName = ""
+        self.lastName = ""
+        self.avatar = ""
+        self.introduction = ""
+    }
+    
+    func setInfo(info: JSON) {
+        self.initedInfo = true
+        self.firstName = info["firstName"].stringValue
+        self.lastName = info["lastName"].stringValue
+        self.avatar = info["avatar"].stringValue
+        self.introduction = info["introduction"].stringValue
+    }
+
     func getFullName() -> String {
         return "\(firstName) \(lastName)"
     }
 }
 
 protocol ACMemberDelegate: class {
-    func getMembersSuccess(group: ACGroup, members: [String])
-    func getMemberSuccess(id: String, member: ACMember)
-    func getMembersFail(group: ACGroup)
-    func getMemberFail(id: String)
+    func getMembersByGroupSuccess(group: ACGroup, members: [ACMember])
+    func getMembersByGroupFail(group: ACGroup)
+
+    func getMemberInfoSuccess(member: ACMember)
+    func getMemberInfoFail()
 }
 
 class ACMemberManager {
@@ -41,8 +63,9 @@ class ACMemberManager {
         self.delegate = delegate
     }
 
-    func getMembers(group: ACGroup) {
-        let rootRef = Firebase(url: "https://alphacamp-frb.firebaseio.com")
+    func getMembersByGroup(group: ACGroup) {
+
+        let rootRef = Firebase(url: ACConfig.fireBaseUrlString)
         var groupRef = rootRef.childByAppendingPath("groups")
 
         switch group {
@@ -56,45 +79,28 @@ class ACMemberManager {
 
         groupRef
         .childByAppendingPath("members")
-        .observeSingleEventOfType(.Value, withBlock: {
-            snapshot in
-            
-            if let membersDic = snapshot.value as? [String: AnyObject] {
+        .observeSingleEventOfType(.Value, withBlock: { snapshot in
 
-                var members: [String] = []
+            var members: [ACMember] = []
 
-                for (mID, _) in membersDic {
-                    members.append(mID)
-                }
-
-                self.delegate?.getMembersSuccess(group, members: members.sort())
-            } else {
-                self.delegate?.getMembersFail(group)
+            for (id, _) in JSON(snapshot.value) {
+                members.append(ACMember(id: id))
             }
+            
+            self.delegate?.getMembersByGroupSuccess(group, members: members)
         })
     }
     
-    func getMember(id: String) {
-        let rootRef = Firebase(url: "https://alphacamp-frb.firebaseio.com")
-        let memberRef = rootRef.childByAppendingPath("members/\(id)")
-        
-        memberRef.observeSingleEventOfType(.Value, withBlock: {
-            snapshot in
+    func getMemberInfo(member: ACMember) {
 
-            if let memberDic = snapshot.value as? [String: String] {
+        let rootRef = Firebase(url: ACConfig.fireBaseUrlString)
+        let memberRef = rootRef.childByAppendingPath("members/\(member.id)")
 
-                let member = ACMember(
-                    firstName: memberDic["firstName"] ?? "",
-                    lastName: memberDic["lastName"] ?? "",
-                    avatar: memberDic["avatar"] ?? "",
-                    introduction: memberDic["introduction"] ?? ""
-                )
+        memberRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
 
-                self.delegate?.getMemberSuccess(id, member: member)
-            } else {
-
-                self.delegate?.getMemberFail(id)
-            }
+            member.setInfo(JSON(snapshot.value))
+            
+            self.delegate?.getMemberInfoSuccess(member)
         })
     }
 }

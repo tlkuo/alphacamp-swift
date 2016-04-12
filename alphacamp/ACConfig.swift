@@ -10,6 +10,7 @@ import Foundation
 
 class ACConfig {
 
+    static let fireBaseUrlString: String = "https://alphacamp-frb.firebaseio.com"
     static let sharedConfig: ACConfig? = ACConfig()
 
     let apiKey: String

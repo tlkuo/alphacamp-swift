@@ -17,8 +17,7 @@ class ACMemberViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var memberManager: ACMemberManager?
-    var groups: [ACGroup: [String]] = [:]
-    var members: [String: ACMember] = [:]
+    var members: [ACGroup: [ACMember]] = [:]
     var membersView: [Int: ACMemberView] = [:]
     var authToken: String?
     var currentGroup: ACGroup = .ACStaffGroup
@@ -29,7 +28,7 @@ class ACMemberViewController: UIViewController {
         // Do any additional setup after loading the view.
         activityIndicator.startAnimating()
         memberManager = ACMemberManager(delegate: self)
-        memberManager?.getMembers(.ACStaffGroup)
+        memberManager?.getMembersByGroup(currentGroup)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +45,7 @@ class ACMemberViewController: UIViewController {
         loadScrollViewWithPage(0)
         loadScrollViewWithPage(1)
 
-        if let groupMember = groups[currentGroup] {
+        if let groupMember = members[currentGroup] {
             memberScrollView.contentSize = CGSize(width: width * CGFloat(groupMember.count), height: height)
             pageControl.numberOfPages = groupMember.count
         }
@@ -64,9 +63,9 @@ class ACMemberViewController: UIViewController {
 
         currentGroup = group
 
-        if groups[group] == nil {
+        if members[group] == nil {
             activityIndicator.startAnimating()
-            memberManager?.getMembers(group)
+            memberManager?.getMembersByGroup(group)
         } else {
             reloadScrollView()
         }
@@ -112,7 +111,7 @@ extension ACMemberViewController: UIScrollViewDelegate {
             return
         }
 
-        guard let groupMember = groups[currentGroup] else {
+        guard let groupMember = members[currentGroup] else {
             return
         }
 
@@ -120,10 +119,10 @@ extension ACMemberViewController: UIScrollViewDelegate {
             return
         }
 
-        let id = groupMember[page]
+        let member = groupMember[page]
 
-        guard let member = members[id] else {
-            memberManager?.getMember(id)
+        if member.initedInfo == false {
+            memberManager?.getMemberInfo(member)
             return
         }
 
@@ -173,9 +172,9 @@ extension ACMemberViewController: UIScrollViewDelegate {
 
 extension ACMemberViewController: ACMemberDelegate {
 
-    func getMembersSuccess(group: ACGroup, members: [String]) {
+    func getMembersByGroupSuccess(group: ACGroup, members: [ACMember]) {
 
-        self.groups[group] = members
+        self.members[group] = members
 
         dispatch_async(dispatch_get_main_queue()) {
 
@@ -187,28 +186,21 @@ extension ACMemberViewController: ACMemberDelegate {
         }
     }
 
-    func getMembersFail(group: ACGroup) {
+    func getMembersByGroupFail(group: ACGroup) {
 
-        dispatch_async(dispatch_get_main_queue()) {
-            self.activityIndicator.stopAnimating()
-        }
     }
     
-    func getMemberSuccess(id: String, member: ACMember) {
+    func getMemberInfoSuccess(member: ACMember) {
+        
+        dispatch_async(dispatch_get_main_queue()) {
 
-        self.members[id] = member
-
-        dispatch_async(dispatch_get_main_queue()) { 
-
-            if let groupMember = self.groups[self.currentGroup],
-                page = groupMember.indexOf(id) {
-
+            if let page = self.members[self.currentGroup]?.indexOf({ $0 === member }) {
                 self.loadScrollViewWithPage(page)
             }
         }
     }
 
-    func getMemberFail(id: String) {
+    func getMemberInfoFail() {
 
     }
 }
