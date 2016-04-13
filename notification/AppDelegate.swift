@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import Batch
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var activeCounter: Int = 0
+    var inactiveCounter: Int = 0
+    var backgroundCounter: Int = 0
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        // local notification
         let settings = UIUserNotificationSettings(forTypes: [.Sound, .Alert, .Badge], categories: nil)
         
         application.registerUserNotificationSettings(settings)
@@ -26,19 +31,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notiDate = now.dateByAddingTimeInterval(10)
         
         localNotification.fireDate = notiDate
-        localNotification.alertBody = "加油"
+        localNotification.alertBody = "This is local alert body"
+        localNotification.alertAction = "This is local alert action"
+        localNotification.userInfo = nil
+        //localNotification.repeatInterval = .Minute
         localNotification.soundName = UILocalNotificationDefaultSoundName
         localNotification.applicationIconBadgeNumber = 1
         
         application.scheduleLocalNotification(localNotification)
         
+        // remote notification
+        
+        // Start Batch
+        Batch.startWithAPIKey("DEV56FDF604CAA918DF1D4CC1CC791")
+        
+        // Register for push notifications
+        BatchPush.registerForRemoteNotifications()
+        
         return true
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        
         print(notification.alertAction)
         print(notification.alertBody)
+        
+        application.applicationIconBadgeNumber = 0
+        
+        if application.applicationState == .Active {
+            activeCounter += 1
+        } else if application.applicationState == .Inactive {
+            inactiveCounter += 1
+        } else if application.applicationState == .Background {
+            backgroundCounter += 1
+        }
+
+        // option 1
+        application.cancelAllLocalNotifications()
+
+        // option 2
+        if let notifications = application.scheduledLocalNotifications {
+
+            for noti in notifications {
+                application.cancelLocalNotification(noti)
+            }
+        }
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        print(userInfo)
+
+        BatchPush.dismissNotifications()
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -57,6 +99,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        application.applicationIconBadgeNumber = 0
+        
+        //print("active: \(activeCounter) inactive: \(inactiveCounter) background: \(backgroundCounter)")
     }
 
     func applicationWillTerminate(application: UIApplication) {

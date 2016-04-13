@@ -14,3 +14,7 @@ target 'alphacamp' do
     pod 'SwiftyJSON'
 end
 
+target 'notification' do
+    pod 'Batch'
+end
+

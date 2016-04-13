@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (3.3.1)
+  - Batch (1.5.1)
   - Firebase (2.5.1)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
@@ -8,16 +9,18 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Batch
   - Firebase
   - SDWebImage
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  Batch: 968cfffd316d2f0e8cd652c97608c6c19e2ec099
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 31b39dc696b5449872a2a8ab23f2b98a07754d45
+PODFILE CHECKSUM: 331b6fa54f7776847fe10f5038cd83df7622e6fc
 
 COCOAPODS: 1.0.0.beta.6
