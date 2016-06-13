@@ -65,26 +65,28 @@ class ACMemberManager {
 
     func getMembersByGroup(group: ACGroup) {
 
-        let rootRef = Firebase(url: ACConfig.fireBaseUrlString)
-        var groupRef = rootRef.childByAppendingPath("groups")
+        let rootRef = FIRDatabase.database().reference()
+        var groupRef = rootRef.child("groups")
 
         switch group {
         case .ACStaffGroup:
-            groupRef = groupRef.childByAppendingPath("staff")
+            groupRef = groupRef.child("staff")
         case .ACMentorGroup:
-            groupRef = groupRef.childByAppendingPath("mentor")
+            groupRef = groupRef.child("mentor")
         case .ACAlumniGroup:
-            groupRef = groupRef.childByAppendingPath("alumni")
+            groupRef = groupRef.child("alumni")
         }
 
         groupRef
-        .childByAppendingPath("members")
+        .child("members")
         .observeSingleEventOfType(.Value, withBlock: { snapshot in
 
             var members: [ACMember] = []
 
-            for (id, _) in JSON(snapshot.value) {
-                members.append(ACMember(id: id))
+            if let value = snapshot.value {
+                for (id, _) in JSON(value) {
+                    members.append(ACMember(id: id))
+                }
             }
             
             self.delegate?.getMembersByGroupSuccess(group, members: members)
@@ -93,13 +95,15 @@ class ACMemberManager {
     
     func getMemberInfo(member: ACMember) {
 
-        let rootRef = Firebase(url: ACConfig.fireBaseUrlString)
-        let memberRef = rootRef.childByAppendingPath("members/\(member.id)")
+        let rootRef = FIRDatabase.database().reference()
+        let memberRef = rootRef.child("members/\(member.id)")
 
         memberRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
 
-            member.setInfo(JSON(snapshot.value))
-            
+            if let value = snapshot.value {
+                member.setInfo(JSON(value))
+            }
+
             self.delegate?.getMemberInfoSuccess(member)
         })
     }

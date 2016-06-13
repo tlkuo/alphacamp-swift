@@ -42,8 +42,8 @@ class ACEventManager {
     // Event list will response through ACEventDelegate
     func getEvents() {
 
-        let rootRef = Firebase(url: ACConfig.fireBaseUrlString)
-        let eventRef = rootRef.childByAppendingPath("events")
+        let rootRef = FIRDatabase.database().reference()
+        let eventRef = rootRef.child("events")
 
         eventRef.observeSingleEventOfType(.Value,
             withBlock: { snapshot in
